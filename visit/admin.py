@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Product, Category, Subcategory, Photo
 
+# какая то штука
 class ProductAdmin(admin.ModelAdmin):
     def render_change_form(self, request, context, *args, **kwargs):
         context['adminform'].form.fields['subcategory'].queryset = Subcategory.objects.filter(
