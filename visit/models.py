@@ -1,6 +1,33 @@
 from django.db import models
 
-# Create your models here.
+
+class Category(models.Model):
+    title = models.CharField(max_length=150, db_index=True, verbose_name='Категория')
+
+    def __str__(self):
+        return self.title
+
+
+    class Meta:
+        verbose_name = 'Категория'
+        verbose_name_plural = 'Категории'
+        ordering = ['title']
+
+
+class Subcategory(models.Model):
+    title = models.CharField(max_length=150, db_index=True, verbose_name='Подкатегория')
+    parent = models.ForeignKey('Category', on_delete=models.PROTECT, null=True, verbose_name='Категория')
+
+    def __str__(self):
+        return self.title
+
+
+    class Meta:
+        verbose_name = 'Подкатегория'
+        verbose_name_plural = 'Подкатегории'
+        ordering = ['parent']
+
+
 class Product(models.Model):
     name = models.CharField(max_length=150, verbose_name='Название')
 
@@ -36,6 +63,7 @@ class Product(models.Model):
         verbose_name_plural = 'Продукты'
         ordering = ['name']
 
+
 class Photo(models.Model):
     product = models.ForeignKey('Product', on_delete=models.CASCADE, verbose_name='Продукт')
     image = models.ImageField(blank = True)
@@ -48,28 +76,3 @@ class Photo(models.Model):
         verbose_name = 'Фото продукта'
         verbose_name_plural = 'Фото продуктов'
         ordering = ['product']
-
-class Category(models.Model):
-    title = models.CharField(max_length=150, db_index=True, verbose_name='Категория')
-
-    def __str__(self):
-        return self.title
-
-
-    class Meta:
-        verbose_name = 'Категория'
-        verbose_name_plural = 'Категории'
-        ordering = ['title']
-
-class Subcategory(models.Model):
-    title = models.CharField(max_length=150, db_index=True, verbose_name='Подкатегория')
-    parent = models.ForeignKey('Category', on_delete=models.PROTECT, null=True, verbose_name='Категория')
-
-    def __str__(self):
-        return self.title
-
-
-    class Meta:
-        verbose_name = 'Подкатегория'
-        verbose_name_plural = 'Подкатегории'
-        ordering = ['parent']
