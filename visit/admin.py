@@ -1,11 +1,11 @@
 from django.contrib import admin
 from .models import Product, Category, Subcategory, Photo
 
-
+# какая то штука
 class ProductAdmin(admin.ModelAdmin):
     def render_change_form(self, request, context, *args, **kwargs):
         context['adminform'].form.fields['subcategory'].queryset = Subcategory.objects.filter(
-        title__iexact='category')
+        parent=1)
         return super(ProductAdmin, self).render_change_form(request, context, *args, **kwargs)
 
     list_display = ('id', 'name', 'product_code', 'availability', 'is_published')

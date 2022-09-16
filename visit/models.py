@@ -24,8 +24,8 @@ class Product(models.Model):
     availability = models.BooleanField(default=True, verbose_name='Наличие товара')
     is_published = models.BooleanField(default=True, verbose_name='Опубликовано')
 
-    category = models.OneToOneField('Category', on_delete=models.PROTECT, null=True, verbose_name='Подкатегория')
-    subcategory = models.OneToOneField('Subcategory', on_delete=models.PROTECT, null=True, verbose_name='Подкатегория')
+    category = models.ForeignKey('Category', on_delete=models.PROTECT, null=True, verbose_name='Категория')
+    subcategory = models.ForeignKey('Subcategory', on_delete=models.PROTECT, null=True, verbose_name='Подкатегория')
 
     def __str__(self):
         return self.name
@@ -63,7 +63,7 @@ class Category(models.Model):
 
 class Subcategory(models.Model):
     title = models.CharField(max_length=150, db_index=True, verbose_name='Подкатегория')
-    category = models.OneToOneField('Category', on_delete=models.PROTECT, null=True, verbose_name='Категория')
+    parent = models.ForeignKey('Category', on_delete=models.PROTECT, null=True, verbose_name='Категория')
 
     def __str__(self):
         return self.title
@@ -72,4 +72,4 @@ class Subcategory(models.Model):
     class Meta:
         verbose_name = 'Подкатегория'
         verbose_name_plural = 'Подкатегории'
-        ordering = ['title']
+        ordering = ['parent']
