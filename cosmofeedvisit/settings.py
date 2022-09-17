@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'visit.apps.VisitConfig',
     'debug_toolbar',
+    'smart_selects',
 ]
 
 MIDDLEWARE = [
