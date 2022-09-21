@@ -12,4 +12,4 @@ def index(request):
         'categories': categories,
         'subcategory': subcategory,
     }
-    return render(request, template_name='index.html', context=context)
+    return render(request, template_name='visit/index.html', context=context)

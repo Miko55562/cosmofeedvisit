@@ -23,6 +23,7 @@ from django.urls import re_path as url
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('__debug__/', include('debug_toolbar.urls')),
+    path('', include('visit.urls')),
     url(r'^chaining/', include('smart_selects.urls')),
 ]
 
