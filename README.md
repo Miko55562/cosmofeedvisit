@@ -2,4 +2,4 @@
 
 ## Состав сайта
 Сайт-визитка для cosmofeed
-![alt text](http://github/Miko55562/main/photo0/img.png)
+![alt text](https://github.com/Miko55562/cosmofeedvisit/blob/main/img.jpg)
