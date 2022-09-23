@@ -13,3 +13,9 @@ def index(request):
         'subcategory': subcategory,
     }
     return render(request, template_name='visit/index.html', context=context)
+
+def catalog(request):
+    return render(request, template_name='visit/catalog.html')
+
+def delivery(request):
+    return render(request, template_name='visit/delivery.html')

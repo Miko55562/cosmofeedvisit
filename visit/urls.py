@@ -5,4 +5,6 @@ from .views import *
 
 urlpatterns = [
     path('', index),
+    path('catalog', catalog),
+    path('delivery', delivery),
 ]
