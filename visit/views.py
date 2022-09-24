@@ -4,18 +4,16 @@ from .models import Category
 from .models import Subcategory
 
 def index(request):
-    products = Product.objects.all()
-    categories = Category.objects.all()
-    subcategory = Subcategory.objects.all()
-    context = {
-        'products': products,
-        'categories': categories,
-        'subcategory': subcategory,
-    }
-    return render(request, template_name='visit/index.html', context=context)
+    return render(request, template_name='visit/index.html')
+
+def index_eng(request):
+    return render(request, template_name='visit/index_eng.html')
 
 def catalog(request):
     return render(request, template_name='visit/catalog.html')
 
 def delivery(request):
     return render(request, template_name='visit/delivery.html')
+
+def delivery_eng(request):
+    return render(request, template_name='visit/delivery_eng.html')

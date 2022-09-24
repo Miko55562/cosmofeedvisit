@@ -13,6 +13,8 @@ body{
     position:relative;
     overflow: auto;
     padding-bottom: 20%;
+    max-width: 1000px;
+    left: 25.5%;
 }
 
 /*--------------------------------------------------------------*/
@@ -31,8 +33,6 @@ body{
         margin: 0 auto;
         width: 100%;
         align-items: center;
-        margin-left: auto;
-        margin-right: auto;
 
         
     }
@@ -152,14 +152,14 @@ body{
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
+    margin-top: 150px;
     width: 100%;
     max-width: 1000px;
     height: 400px;
     text-align: center;
-    border-bottom: 5px solid;
     margin-left: auto;
     margin-right: auto;
+
 }
 
 .request_container{
@@ -177,7 +177,7 @@ body{
     height: 40px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5px;
+    margin-top: 10px;
     color: #a3a3a3;
     font: inherit;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
@@ -191,7 +191,7 @@ body{
     height: 40px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5px;
+    margin-top: 10px;
     color: #a3a3a3;
     font: inherit;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
@@ -206,14 +206,63 @@ body{
     height: 110px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5px;
+    margin-top: 10px;
     color: #a3a3a3;
     font: inherit;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
     border: 0;
     outline: 0;
-    padding: 5px 5px;
+    padding: 10px 18px;
     resize: none;
+}
+
+.request_checkbox_div{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.request_legend{
+    margin-top: 10px;
+    width: 400px;
+    font-size: 14px;
+   
+}
+
+.request_checkbox{
+    height: 20px;
+    width: 20px;
+    margin-top: 20px;
+
+    margin-right: auto;
+    color: #a3a3a3;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    border: 0;
+    outline: 0;
+}
+
+.request_button{
+    width: 200px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    border: 0;
+    outline: 0;
+    background-color: #7f8ff4;
+    transition: all 200ms ease-in;
+
+}
+.request_button:hover{
+  background: #6c7ff2;
+}
+.ostavit{
+  font-weight:600;
 }
 /*REQUEST*/
 /*--------------------------------------------------------------*/
@@ -224,9 +273,10 @@ body{
 .mailing_list{
   text-align: center;
   max-width: 1000px;
-  margin: 50px auto;
+  margin: 150px auto;
   margin-bottom: 50px;
-  width: 100
+  width: 100;
+  
 
 }
 
@@ -279,20 +329,18 @@ body{
 /*mailing list*/
 /*--------------------------------------------------------------*/
 
+/*--------------------------------------------------------------*/
 /*Footer*/
 .footer {
   position: absolute;
   display: flex;
   flex-direction: column;
   border-top: 2px solid;
-  left: 25.5%;
   bottom: 0;
   width: 100%;
   max-width: 1000px;
   height: 5%;
-  margin-left: auto;
-  margin-right: auto;
-
+  
 }
 
 /*для вацапа*/
@@ -308,7 +356,15 @@ margin-top: 30px;
     display: flex;
     margin-top: 3%;
 }
+.whatsapp{
+  filter: grayscale(1); /* Черно-белый фильтр для изображения */
+  transition: 0.5s;
 
+}
+.whatsapp:hover{
+  filter: grayscale(0);
+  
+}
 /*для лого компании*/
 .company{
     width: 100px;
@@ -332,12 +388,39 @@ margin-top: 30px;
     text-align: left;
     margin-top: 30px;
 }
+/*Footer*/
+/*--------------------------------------------------------------*/
 
+/*--------------------------------------------------------------*/
+/*delivery*/
+.delivery{
+  text-align: center;
+  margin: auto;
+  max-width: 1000px;
+  margin-top: 50px;
+  line-height:50px;
+  font-size: 20px;
+  font-weight:500;
 
-
-
-
-
-
+}
+.fow_watsapp_delivery{
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  transition: all 1s ease;
+}
+.fow_watsapp_delivery:hover {
+  transform: rotate(20deg); 
+}
+.map{
+  width: 900px;
+  height: 450px;
+  border: 0px;
+  border-radius: 20px;
+}
+/*delivery*/
+/*--------------------------------------------------------------*/
 
 
