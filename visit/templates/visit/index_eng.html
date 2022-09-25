@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/static/visit/css/main_ing.css">
-    <title>Unapp</title>
+    <title>ЭкоНатурПродукт</title>
+    <link type="Image/x-icon" href="/static/visit/logo/logo_compani.ico" rel="icon">
   </head>
   <body>
 <div id="container">
@@ -42,7 +43,7 @@
       </div>
 <!--end compani-->
 
-
+{% block content %}
 <!--start request-->
 <div class="request">
      <p class="ostavit">Leave a request</p>
@@ -58,7 +59,7 @@
         <a href="#" class="request_legend">By leaving a request, you accept the privacy policy:</a>
         <input type="checkbox" required class="request_checkbox">
             </div>
-        <button type="submit" class="request_button" form="data">Send</button>
+        <input type="submit" class="request_button" form="data" name="ContactForm" value="Send">
         </form>
     </div>
 </div>
@@ -71,14 +72,14 @@
       <p class="mailing">I want to be notified about new arrivals </p>
 
       <div class="container__item">
-        <form class="form">
-          <input type="email" class="form__field" placeholder="Your E-Mail " />
-          <button type="button" class="btn btn--primary btn--inside uppercase">send</button>
+        <form class="form" method="post" id='form_mailing'>{% csrf_token %}
+          <input type="email" class="form__field" name="mail_mailler" placeholder="Your E-Mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
+          <input type="submit" class="btn btn--primary btn--inside uppercase" value="send" name="Mailing">
         </form>
       </div>
     </div>
 <!--edn mailing list-->
-
+{% endblock %}
 <!--Start footer-->
 
     <footer class="footer">

@@ -14,7 +14,7 @@ body{
     overflow: auto;
     padding-bottom: 20%;
     max-width: 1000px;
-    left: 25.5%;
+    margin: auto;
 }
 
 
@@ -35,7 +35,7 @@ body{
         width: 100%;
         align-items: center;
 
-        
+
     }
 
     .header_container{
@@ -44,8 +44,8 @@ body{
         align-items: center;
         border-bottom: 2px solid;
         padding-bottom: 10px;
-        
-        
+
+
 
     }
 
@@ -70,7 +70,7 @@ body{
     }
 
     .navi_link:hover{
-      
+
         border-bottom: 2px solid ;
         padding: 6px 0;
 
@@ -78,7 +78,7 @@ body{
 
     .header_navi{
         margin-left: auto;
-        
+
 
     }
 /* end header*/
@@ -92,14 +92,14 @@ body{
     width: 100%;
     line-height:30px;
     margin: 0 auto;
-    
+
     border-bottom: 2px solid;
     /* боковые линии
     border-left: 2px solid;
     border-right: 2px solid;
    */
-    
-    
+
+
 }
 .compani_1{
     font-size: 30px;
@@ -109,9 +109,9 @@ body{
 
     width: 70%;
     margin: 0.9em auto;
-    
-    
-    
+
+
+
 }
 
 /*o companii*/
@@ -339,7 +339,7 @@ body{
   width: 100%;
   max-width: 1000px;
   height: 5%;
-  
+
 }
 
 /*для вацапа*/
@@ -362,7 +362,7 @@ margin-top: 30px;
 }
 .whatsapp:hover{
   filter: grayscale(0);
-  
+
 }
 /*для лого компании*/
 .company{
@@ -411,7 +411,7 @@ margin-top: 30px;
   transition: all 1s ease;
 }
 .fow_watsapp_delivery:hover {
-  transform: rotate(20deg); 
+  transform: rotate(20deg);
 }
 .map{
   width: 900px;

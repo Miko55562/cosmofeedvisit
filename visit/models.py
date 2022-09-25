@@ -96,7 +96,7 @@ class ContactForm(models.Model):
 
 
 class Malling(models.Model):
-    mail = models.EmailField(verbose_name='Электронная почта')
+    mail = models.EmailField(verbose_name='Электронная почта', unique=True)
 
     def __str__(self):
         return self.mail

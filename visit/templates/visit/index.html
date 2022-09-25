@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/static/visit/css/main.css">
-    <title>Unapp</title>
+    <title>ЭкоНатурПродукт</title>
+    <link type="Image/x-icon" href="/static/visit/logo/logo_compani.ico" rel="icon">
   </head>
   <body>
 <div id="container">
@@ -54,27 +55,25 @@
             <a href="#" class="request_legend">Оставляя заявку, вы принимаете политику конфиденциальности:</a>
             <input type="checkbox" required class="request_checkbox">
                 </div>
-            <button type="submit" class="request_button" form="data">Отправить запрос</button>
+            <input type="submit" class="request_button" name="ContactForm" form="data">
             </form>
         </div>
     </div>
 
 <!--end request-->
-{% endblock %}
-
 <!--start mailing list-->
     <div class="mailing_list">
       <p class="mailing">Я хочу получать сообщение о новых поступлениях </p>
 
       <div class="container__item">
-        <form class="form" method="post">
-          <input type="email" class="form__field" name="mail_mailler" placeholder="Ваш E-Mail " />
-          <button type="button" class="btn btn--primary btn--inside uppercase">Отправить</button>
+        <form class="form" method="post" id='form_mailing'>{% csrf_token %}
+          <input type="email" class="form__field" name="mail_mailler" placeholder="Ваш E-Mail " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
+          <input type="submit" class="btn btn--primary btn--inside uppercase" value="Отправить" name="Mailing">
         </form>
       </div>
     </div>
 <!--end mailing list-->
-
+{% endblock %}
 <!--Start footer-->
 
     <footer class="footer">
