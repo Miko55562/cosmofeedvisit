@@ -12,6 +12,9 @@ def index_eng(request):
 def catalog(request):
     return render(request, template_name='visit/catalog.html')
 
+def catalog_eng(request):
+    return render(request, template_name='visit/catalog_eng.html')
+
 def delivery(request):
     return render(request, template_name='visit/delivery.html')
 

@@ -8,4 +8,5 @@ urlpatterns = [
     path('delivery', delivery),
     path('index_eng', index_eng),
     path('delivery_eng', delivery_eng),
+    path('catalog_eng', catalog_eng),
 ]
