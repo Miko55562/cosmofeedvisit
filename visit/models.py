@@ -78,3 +78,30 @@ class Photo(models.Model):
         verbose_name = 'Фото продукта'
         verbose_name_plural = 'Фото продуктов'
         ordering = ['product']
+
+
+class ContactForm(models.Model):
+    name = models.CharField(max_length=150, verbose_name='Имя')
+    mail = models.EmailField(verbose_name='Электронная почта')
+    message = models.CharField(max_length=150, verbose_name='Сообщение')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Запрос'
+        verbose_name_plural = 'Запросы'
+        ordering = ['-created_at']
+
+
+class Malling(models.Model):
+    mail = models.EmailField(verbose_name='Электронная почта')
+
+    def __str__(self):
+        return self.mail
+
+    class Meta:
+        verbose_name = 'Рассылка'
+        verbose_name_plural = 'Рассылки'
+        ordering = ['id']
