@@ -6,6 +6,11 @@ from .models import ContactForm
 from .models import Malling
 from django.core.mail import send_mail
 
+
+def robots(request):
+    return render(request, template_name='visit/robots.txt', content_type="text/plain")
+
+
 def index(request):
     if request.method == 'POST' and request.POST.get('ContactForm'):
         print(request.POST.get('ContactForm'))

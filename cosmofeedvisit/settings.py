@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-b)@2reu0g$9t=$ef@jm%)2_$f=7mo18fv4hy5$om_5c+_#*4%$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.55']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -122,13 +122,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'cosmofeedvisit/static')
-]
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'visit/static')
-]
+STATIC_ROOT = 'static/'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 

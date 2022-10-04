@@ -1,0 +1,7 @@
+User-Agent: *
+Disallow: /catalog/
+Disallow: /delivery/
+Disallow: /catalog/
+Disallow: /delivery/
+Disallow: /catalog/
+Disallow: /delivery/

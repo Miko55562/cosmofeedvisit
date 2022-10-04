@@ -9,17 +9,22 @@ body{
     font-size: 16px;
     font-style: normal;
     overflow: hidden;
-    background-color: 	#DCDCDC;
+    background-color: 	#fff;
     position:relative;
     overflow: auto;
     padding-bottom: 20%;
-    max-width: 1000px;
-    margin: auto;
+
+    min-width: 1100px;
+    margin:auto;
 }
 
 
 /*--------------------------------------------------------------*/
 /* start header */
+.header{
+  background-color: 	#ededed;
+  border-bottom: 2px solid;
+}
     img{
         display: inline-block;
         max-width: 100%;
@@ -29,29 +34,28 @@ body{
     }
 
     .container{
-        max-width: 1000px;
+        max-width: 1500px;
         left: 25%;
         margin: 0 auto;
         width: 100%;
         align-items: center;
 
-
+        
     }
 
     .header_container{
         display: flex;
         flex: 1;
         align-items: center;
-        border-bottom: 2px solid;
         padding-bottom: 10px;
-
-
+        
+        
 
     }
 
     .logo{
-        width: 50px;
-        height: 50px;
+        width: 120px;
+        height: 120px;
         display: inline-block;
 
     }
@@ -63,14 +67,15 @@ body{
         margin: 0 17px;
         color: black;
         transition: 0.4s ease;
-        font-size: 20px;
+        font-size: 23px;
+        font-weight: 500;
 
-        border-bottom: 2px solid 	#DCDCDC ;
+        border-bottom: 2px solid 	#ededed ;
 
     }
 
     .navi_link:hover{
-
+      
         border-bottom: 2px solid ;
         padding: 6px 0;
 
@@ -78,13 +83,66 @@ body{
 
     .header_navi{
         margin-left: auto;
+        
 
-
+    }
+    .flag{
+      width: 38px;
+      height: 23px;
+      margin-bottom: 16px;
+      margin-left: 5px;
+    
+    }
+    .name_header{
+      text-align: center;
+      margin-left: 40px;
+      font-size: 40px;
+      font-weight: 600;
+    }
+    .name_header_2{
+      text-align: center;font-size: 23px;
+      font-weight: 500;
     }
 /* end header*/
 /*--------------------------------------------------------------*/
 
+.invite{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
 /*--------------------------------------------------------------*/
+/* start compani*/
+.compani{
+    text-align: center;
+    max-width: 1000px;
+    width: 100%;
+    line-height:30px;
+    margin: 0 auto;
+
+    border-bottom: 2px solid;
+    /* боковые линии
+    border-left: 2px solid;
+    border-right: 2px solid;
+   */
+
+
+}
+.compani_1{
+    font-size: 30px;
+    font-stretch: ultra-expanded;
+
+    font-weight:700;
+
+    width: 70%;
+    margin: 0.9em auto;
+
+
+
+}
+
+/*o companii*/
 /* start compani*/
 .compani{
     text-align: center;
@@ -122,25 +180,23 @@ body{
     width: 43.8%;
     height: 0.50em;
     border-bottom: 2px solid #000;
-    margin: 0 8.4% 0 -48.6%;
+    margin: 0 13% 0 -44%;
   }
  .compani_1:after {
-    margin: 0 -48.6% 0 8.4%;
+    margin: 0 -44% 0 13%;
   }
 /*o companii*/
 
 .compani_2{
-    font-size: 13px;
-    font-weight:100;
-    color: #696969;
-    transition: 0.65s ease;
+    font-size: 16px;
+    font-weight:300;
+    color: #000;
+    transition: 0.7s ease;
     padding-bottom: 60px;
-
 }
 
 .compani_2:hover{
-    font-size: 16px;
-    font-weight:400;
+    font-size: 18px;
     color: #000
 }
 /*  compani*/
@@ -153,7 +209,7 @@ body{
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-top: 150px;
+    margin-top: 50px;
     width: 100%;
     max-width: 1000px;
     height: 400px;
@@ -273,7 +329,7 @@ body{
 .mailing_list{
   text-align: center;
   max-width: 1000px;
-  margin: 150px auto;
+  margin: 50px auto;
   margin-bottom: 50px;
   width: 100
 
@@ -325,69 +381,111 @@ body{
   outline: 0;
   padding: 22px 18px;
 }
+
+.form_checkbox_div{
+    display: flex;
+    flex-direction: row;
+    margin-left: 290px;
+
+}
+
+.form_legend{
+    margin-top: 10px;
+    width: 400px;
+    font-size: 18px;
+}
+
+.form_checkbox{
+    height: 20px;
+    width: 20px;
+    margin-top: 20px;
+    margin-right: auto;
+    color: #a3a3a3;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    border: 0;
+    outline: 0
+}
 /*mailing list*/
 /*--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------*/
-/*Footer*/
 .footer {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  border-top: 2px solid;
-  bottom: 0;
-  width: 100%;
-  max-width: 1000px;
-  height: 5%;
+    position: absolute;
+    border-top: 2px solid;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+    text-align: center;
 
 }
 
-/*для вацапа*/
-.whatsapp{
-width: 60px;
-height: 60px;
-text-indent: 50%;
-margin-top: 30px;
-}
-
-/*для дива с вацапом*/
-.fow_watsapp{
+.footer_wrap{
+    background-color: #f2f2f2;
     display: flex;
-    margin-top: 3%;
-}
-.whatsapp{
-  filter: grayscale(1); /* Черно-белый фильтр для изображения */
-  transition: 0.5s;
+    flex-direction: column;
 
-}
-.whatsapp:hover{
-  filter: grayscale(0);
-
-}
-/*для лого компании*/
-.company{
-    width: 100px;
-    height: 100px;
-    margin-left: 850px;
-    padding-bottom: 10px;
 }
 
 /*для номера телефона и почты*/
-.info{
-    display: block;
-    max-width: 350px;
-    height: 20%;
+.footer_info{
+    display: flex;
     flex-direction: row;
-    padding-top: 10px;
+    max-width: 350px;
+    height: 10%;
+    padding-top: 20px;
     line-height: 2;
+    font-size: 20px;
+    margin-left: 5%;
+}
+
+/*для лого компании*/
+.footer_company{
+    width: 100px;
+    height: 100px;
+    margin-left: 81%;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    position: absolute;
+}
+
+/*для дива с вацапом*/
+.for_watsapp{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+}
+.whatsapp{
+    filter: grayscale(1); /* Черно-белый фильтр для изображения */
+    transition: 0.5s;
+}
+.whatsapp{
+    width: 70px;
+    height: 70px;
+    margin-top: 20px;
+}
+.whatsapp:hover{
+  filter: grayscale(0);
 }
 
 /*для нижней записи*/
-.OOO{
-    text-align: left;
-    margin-top: 30px;
+.footer_OOO{
+    text-align: right;
+    font-size: 20px;
+    margin-right: 5%;
+
 }
-/*Footer*/
+
+.footer_certificate{
+    margin-right: auto;
+}
+
+#certificate{
+    text-decoration: none;
+    margin-left: 190px;
+    color: black;
+    font-size: 25px;
+}
 /*--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------*/
@@ -411,7 +509,7 @@ margin-top: 30px;
   transition: all 1s ease;
 }
 .fow_watsapp_delivery:hover {
-  transform: rotate(20deg);
+  transform: rotate(20deg); 
 }
 .map{
   width: 900px;
