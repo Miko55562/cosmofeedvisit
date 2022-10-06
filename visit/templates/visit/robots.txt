@@ -1,7 +1,14 @@
 User-Agent: *
-Disallow: /catalog/
-Disallow: /delivery/
-Disallow: /catalog/
-Disallow: /delivery/
-Disallow: /catalog/
-Disallow: /delivery/
+Disallow: /?
+Disallow: /403.html
+Disallow: /404.html
+Disallow: /500.html
+
+Sitemap: https://econaturprodukt.ru/sitemap.xml
+
+Allow: /catalog/
+Allow: /delivery/
+Allow: /catalog/
+Allow: /delivery/
+Allow: /catalog/
+Allow: /delivery/

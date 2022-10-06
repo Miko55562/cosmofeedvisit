@@ -20,7 +20,7 @@
                 width: 1000px;
                 margin-left: auto;
                 margin-right: auto;
-                border-radius: 10px 10px 10px 10px;
+                border-radius: 10px;
 
             }
 
@@ -28,7 +28,7 @@
                 text-align: center;
                 font-size: 18px;
                 background: #fff;
-                border-radius: 10px 10px 10px 10px;
+                border-radius: 10px;
                 /* Center slide text vertically */
                 display: -webkit-box;
                 display: -ms-flexbox;
@@ -50,23 +50,40 @@
                 width: 70%;
                 height: 50%;
                 object-fit: cover;
+                border-radius: 10px;
             }
         </style>
+<!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+            ym(90585634, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+            });
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/90585634" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
     </head>
     <body>
 <!--start header-->
     <header class="header">
       <div class="header_container">
 
-          <a href="/" class="logo">
+          <a href="" class="logo">
             <img src="/static/visit/logo/logo_compani.png" alt="logo">
           </a>
 
             <h1 class="name_header">Торговая Компания<br><p class="name_header_2">ЭкоНатурПродукт</p></h1>
           <nav class="navi header_navi">
-            <a href="catalog" class="navi_link">КАТАЛОГ</a>
-            <a href="delivery" class="navi_link">ДОСТАВКА</a>
-            <a href="index_eng" class="navi_link">RUS <img class="flag" src="/static/visit/img/rus.jpg"></a>
+            <a href="/" class="navi_link">Телефон: +7 (986) 953 14 33 </a>
+            <a href="index_eng" class="navi_link1">RUS <img class="flag" src="/static/visit/img/rus.jpg"></a>
 
           </nav>
       </div>
@@ -74,71 +91,72 @@
 <!--end header-->
 
 <div class="catalog">
+    <button type="button" id="catalog_button_10" class="catalog_button_10">Все</button>
     <button type="button" id="catalog_button_0" class="catalog_button_0">Десерты</button>
     <div id="myModal" class="modal">
         <div class="modal-content">
-            <a href="catalog.html" class="modal-link">Консервированные</a>
-            <a href="catalog.html" class="modal-link">В индивидуальной<br>упаковке</a>
+            <a href="catalog" class="modal-link">Консервированные</a>
+            <a href="catalog" class="modal-link">В индивидуальной<br>упаковке</a>
         </div>
     </div>
     <button type="button" id="catalog_button_1" class="catalog_button_1">Индивидуальный рацион питания</button>
     <div id="myModal1" class="modal1">
         <div class="modal-content1">
-            <a href="catalog.html" class="modal-link1">В брикетах</a>
-            <a href="catalog.html" class="modal-link1">В пакетах</a>
+            <a href="catalog" class="modal-link1">В брикетах</a>
+            <a href="catalog" class="modal-link1">В пакетах</a>
         </div>
     </div>
     <button type="button" id="catalog_button_2" class="catalog_button_2">Каши</button>
     <div id="myModal2" class="modal2">
         <div class="modal-content2">
-            <a href="catalog.html" class="modal-link2">В пакетах</a>
-            <a href="catalog.html" class="modal-link2">В стаканах</a>
-            <a href="catalog.html" class="modal-link2">По весу</a>
+            <a href="catalog" class="modal-link2">В пакетах</a>
+            <a href="catalog" class="modal-link2">В стаканах</a>
+            <a href="catalog" class="modal-link2">По весу</a>
         </div>
     </div>
     <button type="button" id="catalog_button_3" class="catalog_button_3">Кисели</button>
     <div id="myModal3" class="modal3">
         <div class="modal-content3">
-            <a href="catalog.html" class="modal-link3">В пакетах</a>
-            <a href="catalog.html" class="modal-link3">В брикетах</a>
+            <a href="catalog" class="modal-link3">В пакетах</a>
+            <a href="catalog" class="modal-link3">В брикетах</a>
         </div>
     </div>
     <button type="button" id="catalog_button_4" class="catalog_button_3">Консервы</button>
     <div id="myModal4" class="modal4">
         <div class="modal-content4">
-            <a href="catalog.html" class="modal-link4">Мясные</a>
-            <a href="catalog.html" class="modal-link4">Овощные</a>
-            <a href="catalog.html" class="modal-link4">Рыбные</a>
-            <a href="catalog.html" class="modal-link4">Десерты</a>
+            <a href="catalog" class="modal-link4">Мясные</a>
+            <a href="catalog" class="modal-link4">Овощные</a>
+            <a href="catalog" class="modal-link4">Рыбные</a>
+            <a href="catalog" class="modal-link4">Десерты</a>
         </div>
     </div>
     <button type="button" id="catalog_button_5" class="catalog_button_5">Макароны, крупы и хлопья</button>
     <div id="myModal5" class="modal5">
         <div class="modal-content5">
-            <a href="catalog.html" class="modal-link5">В пакетах</a>
-            <a href="catalog.html" class="modal-link5">В стаканах</a>
-            <a href="catalog.html" class="modal-link5">По весу</a>
+            <a href="catalog" class="modal-link5">В пакетах</a>
+            <a href="catalog" class="modal-link5">В стаканах</a>
+            <a href="catalog" class="modal-link5">По весу</a>
         </div>
     </div>
     <button type="button" id="catalog_button_6" class="catalog_button_6">Пловы</button>
     <div id="myModal6" class="modal6">
         <div class="modal-content6">
-            <a href="catalog.html" class="modal-link6">В пакетах</a>
-            <a href="catalog.html" class="modal-link6">По весу</a>
+            <a href="catalog" class="modal-link6">В пакетах</a>
+            <a href="catalog" class="modal-link6">По весу</a>
         </div>
     </div>
     <button type="button" class="catalog_button_7">Подарочные наборы</button>
     <button type="button" id="catalog_button_8" class="catalog_button_8">Супы</button>
     <div id="myModal8" class="modal8">
         <div class="modal-content8">
-            <a href="catalog.html" class="modal-link8">В пакетах</a>
-            <a href="catalog.html" class="modal-link8">По весу</a>
+            <a href="catalog" class="modal-link8">В пакетах</a>
+            <a href="catalog" class="modal-link8">По весу</a>
         </div>
     </div>
     <button type="button"  id="catalog_button_9" class="catalog_button_9">Сублимированные продукты</button>
     <div id="myModal9" class="modal9">
         <div class="modal-content9">
-            <a href="catalog.html" class="modal-link9">В пакетах</a>
+            <a href="catalog" class="modal-link9">В пакетах</a>
         </div>
     </div>
     <script src="/static/visit/js/script.js"></script>
@@ -393,6 +411,7 @@
 
 
 
+
 </div>
     <!--Start footer-->
 
@@ -408,9 +427,9 @@
                 <a href="#" class="links_style">О компании</a>
                 <a href="#" class="links_style">Партнеры</a>
                 <a href="#" class="links_style">Сотрудничество</a>
-                <a href="#" class="links_style">Доставка</a>
+                <a href="delivery" class="links_style">Доставка</a>
                 <a href="#" class="links_style">Сертификаты</a>
-                <a href="#" class="links_style">Политика конфеденциальности</a>
+                <a href="https://rosstat.gov.ru/politika-konfidencialnosti" class="links_style">Политика конфеденциальности</a>
             </div>
             <div class="third">
                 <p class="footer_company"><img src="/static/visit/logo/logo_compani.png"></p>
