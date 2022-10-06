@@ -70,9 +70,6 @@ class Photo(models.Model):
     product = models.ForeignKey('Product', on_delete=models.CASCADE, verbose_name='Продукт')
     image = models.ImageField(blank = True)
 
-    def __str__(self):
-        return self.product
-
 
     class Meta:
         verbose_name = 'Фото продукта'
