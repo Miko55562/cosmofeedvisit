@@ -6,23 +6,578 @@
 
 body{
     font-family: "RobotoLight", Helvetica, Arial;
-    font-size: 16px;
+    font-size: 18px;
     font-style: normal;
     overflow: hidden;
-    background-color: 	#fff;
+    background: linear-gradient(45deg, #e1e4e9 25%, #e6eaec 0, #e6eaec 50%, #e1e4e9 0, #e1e4e9 75%, #e6eaec 0);
+    background-size: 30px 30px;
     position:relative;
     overflow: auto;
     padding-bottom: 20%;
 
     min-width: 1100px;
     margin:auto;
+
 }
 
+.catalog{
+    width: 300px;
+    height: 465px;
+    position: fixed;
+    left: 0px;
+    top: 20%;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #333;
+}
+
+.catalog_button_0{
+    margin-top: 5px;
+    width: 290px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background: white;
+    border: 0.5px solid;
+}
+.catalog_button_0:focus {
+    border: none;
+    background: white;
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, black 50%, black 50%),
+        linear-gradient(to bottom, black 50%, black 50%),
+        linear-gradient(to right, black 50%, black 50%),
+        linear-gradient(to bottom, black 50%, black 50%);
+    background-size:    100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+    animation: anim-cal_button .5s cubic-bezier(.4, .4, .4, .4);
+    animation-duration: 0.7s;
+    animation-play-state: running;
+}
+
+/*0*/
+.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  margin-top: 10.09%; /* Сидеть на вершине */
+  margin-left: 300px;
+  left: 0;
+  top: 0;
+  text-decoration: none;
+  color: black;
+  background-color: #fff;
+}
+
+/* Модальное содержание/коробка */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  border: 1px solid #888;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  line-height: 1.5;
+  padding: 5px;
+  width: 190px; /* Полная ширина */
+  height: 100px; /* Полная высота */
+}
+
+.modal-link{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+/*1*/
+.modal1 {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  margin-top: 12.9%; /* Сидеть на вершине */
+  margin-left: 300px;
+  left: 0;
+  top: 0;
+  text-decoration: none;
+  color: black;
+  background-color: #fff;
+}
+
+/* Модальное содержание/коробка */
+.modal-content1 {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #888;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  line-height: 1.5;
+  padding: 5px;
+  width: 190px; /* Полная ширина */
+  height: 70px; /* Полная высота */
+}
+
+.modal-link1{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+/*2*/
+.modal2 {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  margin-top: 15%; /* Сидеть на вершине */
+  margin-left: 300px;
+  left: 0;
+  top: 0;
+  text-decoration: none;
+  color: black;
+  background-color: #fff;
+}
+
+/* Модальное содержание/коробка */
+.modal-content2 {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #888;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  line-height: 1.5;
+  padding: 5px;
+  width: 190px; /* Полная ширина */
+  height: 100px; /* Полная высота */
+}
+
+.modal-link2{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+/*3*/
+.modal3 {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  margin-top: 17%; /* Сидеть на вершине */
+  margin-left: 300px;
+  left: 0;
+  top: 0;
+  text-decoration: none;
+  color: black;
+  background-color: #fff;
+}
+
+/* Модальное содержание/коробка */
+.modal-content3 {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #888;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  line-height: 1.5;
+  padding: 5px;
+  width: 190px; /* Полная ширина */
+  height: 100px; /* Полная высота */
+}
+
+.modal-link3{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+/*4*/
+.modal4 {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  margin-top: 19.3%; /* Сидеть на вершине */
+  margin-left: 300px;
+  left: 0;
+  top: 0;
+  text-decoration: none;
+  color: black;
+  background-color: #fff;
+}
+
+/* Модальное содержание/коробка */
+.modal-content4 {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #888;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  line-height: 1.5;
+  padding: 5px;
+  width: 190px; /* Полная ширина */
+  height: 130px; /* Полная высота */
+}
+
+.modal-link4{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+/*5*/
+.modal5 {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  margin-top: 21.5%; /* Сидеть на вершине */
+  margin-left: 300px;
+  left: 0;
+  top: 0;
+  text-decoration: none;
+  color: black;
+  background-color: #fff;
+}
+
+/* Модальное содержание/коробка */
+.modal-content5 {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #888;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  line-height: 1.5;
+  padding: 5px;
+  width: 190px; /* Полная ширина */
+  height: 100px; /* Полная высота */
+}
+
+.modal-link5{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+/*6*/
+.modal6 {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  margin-top: 23.7%; /* Сидеть на вершине */
+  margin-left: 300px;
+  left: 0;
+  top: 0;
+  text-decoration: none;
+  color: black;
+  background-color: #fff;
+}
+
+/* Модальное содержание/коробка */
+.modal-content6 {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #888;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  line-height: 1.5;
+  padding: 5px;
+  width: 190px; /* Полная ширина */
+  height: 70px; /* Полная высота */
+}
+
+.modal-link6{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+
+/*ДЛЯ СЕДЬМОГО НЕ НАДО God Bless*/
+
+
+/*8*/
+.modal8 {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  margin-top: 28.2%; /* Сидеть на вершине */
+  margin-left: 300px;
+  left: 0;
+  top: 0;
+  text-decoration: none;
+  color: black;
+  background-color: #fff;
+}
+
+/* Модальное содержание/коробка */
+.modal-content8 {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #888;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  line-height: 1.5;
+  padding: 5px;
+  width: 190px; /* Полная ширина */
+  height: 70px; /* Полная высота */
+}
+
+.modal-link8{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+/*9*/
+.modal9 {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  margin-top: 30.5%; /* Сидеть на вершине */
+  margin-left: 300px;
+  left: 0;
+  top: 0;
+  text-decoration: none;
+  color: black;
+  background-color: #fff;
+}
+
+/* Модальное содержание/коробка */
+.modal-content9 {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #888;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  line-height: 1.5;
+  padding: 5px;
+  width: 190px; /* Полная ширина */
+  height: 40px; /* Полная высота */
+}
+
+.modal-link9{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+/*--------------------------------------------------------------------------------------------*/
+.catalog_button_1{
+    margin-top: 5px;
+    width: 290px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background: white;
+    border: 1px solid;
+}
+
+.catalog_button_1:focus {
+    border: none;
+    background: white;
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%),
+        linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%);
+    background-size:    100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+    animation: anim-cal_button .5s cubic-bezier(.5, .5, .5, .5);
+    animation-duration: 0.7s;
+    animation-play-state: running;
+}
+
+.catalog_button_2{
+    margin-top: 5px;
+    width: 290px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background: white;
+    border: 1px solid;
+}
+
+.catalog_button_2:focus {
+    border: none;
+    background: white;
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%),
+        linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%);
+    background-size:    100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+    animation: anim-cal_button .5s cubic-bezier(.5, .5, .5, .5);
+    animation-duration: 0.7s;
+    animation-play-state: running;
+}
+
+.catalog_button_3{
+    margin-top: 5px;
+    width: 290px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background: white;
+    border: 1px solid;
+}
+
+.catalog_button_3:focus {
+    border: none;
+    background: white;
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%),
+        linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%);
+    background-size:    100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+    animation: anim-cal_button .5s cubic-bezier(.5, .5, .5, .5);
+    animation-duration: 0.7s;
+    animation-play-state: running;
+}
+
+.catalog_button_4{
+    margin-top: 5px;
+    width: 290px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background: white;
+    border: 1px solid;
+}
+
+.catalog_button_4:focus {
+    border: none;
+    background: white;
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%),
+        linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%);
+    background-size:    100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+    animation: anim-cal_button .5s cubic-bezier(.5, .5, .5, .5);
+    animation-duration: 0.7s;
+    animation-play-state: running;
+}
+
+.catalog_button_5{
+    margin-top: 5px;
+    width: 290px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background: white;
+    border: 1px solid;
+}
+
+.catalog_button_5:focus {
+    border: none;
+    background: white;
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%),
+        linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%);
+    background-size:    100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+    animation: anim-cal_button .5s cubic-bezier(.5, .5, .5, .5);
+    animation-duration: 0.7s;
+    animation-play-state: running;
+}
+
+.catalog_button_6{
+    margin-top: 5px;
+    width: 290px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background: white;
+    border: 1px solid;
+}
+
+.catalog_button_6:focus {
+    border: none;
+    background: white;
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%),
+        linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%);
+    background-size:    100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+    animation: anim-cal_button .5s cubic-bezier(.5, .5, .5, .5);
+    animation-duration: 0.7s;
+    animation-play-state: running;
+}
+
+.catalog_button_7{
+    margin-top: 5px;
+    width: 290px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background: white;
+    border: 1px solid;
+}
+
+.catalog_button_7:focus {
+    border: none;
+    background: white;
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%),
+        linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%);
+    background-size:    100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+    animation: anim-cal_button .5s cubic-bezier(.5, .5, .5, .5);
+    animation-duration: 0.7s;
+    animation-play-state: running;
+}
+
+.catalog_button_8{
+    margin-top: 5px;
+    width: 290px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background: white;
+    border: 1px solid;
+}
+
+.catalog_button_8:focus {
+    border: none;
+    background: white;
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%),
+        linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%);
+    background-size:    100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+    animation: anim-cal_button .5s cubic-bezier(.5, .5, .5, .5);
+    animation-duration: 0.7s;
+    animation-play-state: running;
+}
+
+.catalog_button_9{
+    margin-top: 5px;
+    width: 290px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background: white;
+    border: 1px solid;
+}
+
+.catalog_button_9:focus {
+    border: none;
+    background: white;
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%),
+        linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%);
+    background-size:    100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+    animation: anim-cal_button .5s cubic-bezier(.5, .5, .5, .5);
+    animation-duration: 0.7s;
+    animation-play-state: running;
+}
 
 /*--------------------------------------------------------------*/
 /* start header */
 .header{
-  background-color: 	#ededed;
+  background-color: 	#fff;
   border-bottom: 2px solid;
 }
     img{
@@ -33,23 +588,30 @@ body{
         margin-top: 5px;
     }
 
-    .container{
-        max-width: 1500px;
-        left: 25%;
-        margin: 0 auto;
-        width: 100%;
-        align-items: center;
-
-        
-    }
+.container{
+    max-width: 1500px;
+    left: 25%;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 100%;
+    align-items: center;
+    background: #fff;
+    border-radius: 20px;
+}
 
     .header_container{
         display: flex;
         flex: 1;
         align-items: center;
+
         padding-bottom: 10px;
-        
-        
+        max-width: 1500px;
+        left: 25%;
+        margin: 0 auto;
+        width: 100%;
+        align-items: center;
+        background: #fff;
+
 
     }
 
@@ -75,7 +637,7 @@ body{
     }
 
     .navi_link:hover{
-      
+
         border-bottom: 2px solid ;
         padding: 6px 0;
 
@@ -83,7 +645,7 @@ body{
 
     .header_navi{
         margin-left: auto;
-        
+
 
     }
     .flag{
@@ -91,16 +653,17 @@ body{
       height: 23px;
       margin-bottom: 16px;
       margin-left: 5px;
-    
+
     }
     .name_header{
       text-align: center;
       margin-left: 40px;
-      font-size: 40px;
+      font-size: 23px;
       font-weight: 600;
     }
     .name_header_2{
-      text-align: center;font-size: 23px;
+      text-align: center;
+      font-size: 40px;
       font-weight: 500;
     }
 /* end header*/
@@ -329,10 +892,9 @@ body{
 .mailing_list{
   text-align: center;
   max-width: 1000px;
-  margin: 50px auto;
-  margin-bottom: 50px;
-  width: 100
-
+  margin: 150px auto;
+  width: 100;
+  padding-bottom: 50px;
 }
 
 .container__item{
@@ -410,82 +972,84 @@ body{
 /*--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------*/
+/*Footer*/
 .footer {
     position: absolute;
     border-top: 2px solid;
     bottom: 0;
     width: 100%;
-    height: 5%;
-    text-align: center;
-
+    height: 10%;
 }
 
 .footer_wrap{
-    background-color: #f2f2f2;
     display: flex;
-    flex-direction: column;
-
+    background: #fff;
 }
 
-/*для номера телефона и почты*/
+.first{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 20%;
+}
+
 .footer_info{
     display: flex;
     flex-direction: row;
-    max-width: 350px;
+    margin-top: 50px;
+    margin-left: 50px;
     height: 10%;
-    padding-top: 20px;
-    line-height: 2;
     font-size: 20px;
-    margin-left: 5%;
+    line-height: 1.5;
 }
 
-/*для лого компании*/
-.footer_company{
-    width: 100px;
-    height: 100px;
-    margin-left: 81%;
-    margin-top: 20px;
-    padding-bottom: 10px;
-    position: absolute;
-}
-
-/*для дива с вацапом*/
-.for_watsapp{
-    display: flex;
-    flex-direction: column;
-    margin-left: 10%;
-}
-.whatsapp{
-    filter: grayscale(1); /* Черно-белый фильтр для изображения */
-    transition: 0.5s;
-}
 .whatsapp{
     width: 70px;
     height: 70px;
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-left: 150px;
+    filter: grayscale(1); /* Черно-белый фильтр для изображения */
+    transition: 0.5s;
 }
+
 .whatsapp:hover{
   filter: grayscale(0);
 }
 
-/*для нижней записи*/
+.second{
+    padding-top: 50px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    width: 40%;
+}
+
+.links_style{
+    text-decoration: none;
+    color: black;
+}
+
+.third{
+    height: 250px;
+    width: 40%;
+}
+
+.footer_company{
+    width: 120px;
+    height: 120px;
+    margin-top: 70px;
+    margin-left: 520px;
+    position: absolute;
+}
+
 .footer_OOO{
     text-align: right;
-    font-size: 20px;
-    margin-right: 5%;
-
-}
-
-.footer_certificate{
-    margin-right: auto;
-}
-
-#certificate{
-    text-decoration: none;
-    margin-left: 190px;
-    color: black;
     font-size: 25px;
+    margin-right: 5%;
+    margin-top: 215px;
 }
+/*Footer*/
 /*--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------*/
@@ -509,7 +1073,7 @@ body{
   transition: all 1s ease;
 }
 .fow_watsapp_delivery:hover {
-  transform: rotate(20deg); 
+  transform: rotate(20deg);
 }
 .map{
   width: 900px;

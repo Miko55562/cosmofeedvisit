@@ -5,7 +5,7 @@
   flex-wrap: wrap;
 }
 .wrapper {
-  width: 310px;
+  width: 275px;
   height: 505px;
   background: white;
   margin: auto;
@@ -24,7 +24,7 @@
 }
 .wrapper .container .bottom {
   width: 200%;
-  height: 200px;
+  height: 300px;
   transition: transform 0.5s;
   position: absolute;
 }
@@ -40,7 +40,7 @@
 .wrapper .container .bottom .left {
   height: 100%;
   width: 50%;
-  background: #ededed;
+  background: #f2f2f2;
   position: relative;
 }
 .wrapper .container .bottom .left .details {

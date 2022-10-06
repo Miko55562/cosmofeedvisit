@@ -6,9 +6,9 @@
             name="viewport"
             content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
         />
-        <link rel="stylesheet" href="/static/visit/css/main_ing.css">
+        <link rel="stylesheet" href="/static/visit/css/main.css">
         <title>ЭкоНатурПродукт</title>
-        <link type="Image/x-icon" href="/static/visit/logo/logo_compani.ico" rel="icon">
+        <link type="image/x-icon" href="/static/visit/logo/logo_compani.ico" rel="icon">
         <link rel="stylesheet" href="/static/visit/css/misha.css"/>
         <link
             rel="stylesheet"
@@ -55,7 +55,7 @@
         </style>
   </head>
   <body>
-<div id="container">
+
 <!--start header-->
     <header class="header">
       <div class="container header_container">
@@ -74,10 +74,78 @@
     </header>
 <!--end header-->
 
-    <div class="invite">
-        <p>We invite you to cooperate!</p>
+<div class="catalog">
+    <button type="button" id="catalog_button_0" class="catalog_button_0">Desserts</button>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <a href="catalog.html" class="modal-link">Canned</a>
+            <a href="catalog.html" class="modal-link">Individually packaged</a>
+        </div>
     </div>
+    <button type="button" id="catalog_button_1" class="catalog_button_1">Individual diets</button>
+    <div id="myModal1" class="modal1">
+        <div class="modal-content1">
+            <a href="catalog.html" class="modal-link1">In briquettes</a>
+            <a href="catalog.html" class="modal-link1">In packages</a>
+        </div>
+    </div>
+    <button type="button" id="catalog_button_2" class="catalog_button_2">Cereals</button>
+    <div id="myModal2" class="modal2">
+        <div class="modal-content2">
+            <a href="catalog.html" class="modal-link2">In packages</a>
+            <a href="catalog.html" class="modal-link2">In glasses</a>
+            <a href="catalog.html" class="modal-link2">By weight</a>
+        </div>
+    </div>
+    <button type="button" id="catalog_button_3" class="catalog_button_3">Kissels</button>
+    <div id="myModal3" class="modal3">
+        <div class="modal-content3">
+            <a href="catalog.html" class="modal-link3">In packages</a>
+            <a href="catalog.html" class="modal-link3">In briquettes</a>
+        </div>
+    </div>
+    <button type="button" id="catalog_button_4" class="catalog_button_3">Canned food</button>
+    <div id="myModal4" class="modal4">
+        <div class="modal-content4">
+            <a href="catalog.html" class="modal-link4">Meat</a>
+            <a href="catalog.html" class="modal-link4">Vegetables</a>
+            <a href="catalog.html" class="modal-link4">Fish</a>
+            <a href="catalog.html" class="modal-link4">Desserts</a>
+        </div>
+    </div>
+    <button type="button" id="catalog_button_5" class="catalog_button_5">Pasta, groats and cereals</button>
+    <div id="myModal5" class="modal5">
+        <div class="modal-content5">
+            <a href="catalog.html" class="modal-link5">In packages</a>
+            <a href="catalog.html" class="modal-link5">In glasses</a>
+            <a href="catalog.html" class="modal-link5">In packages</a>
+        </div>
+    </div>
+    <button type="button" id="catalog_button_6" class="catalog_button_6">Pilaf</button>
+    <div id="myModal6" class="modal6">
+        <div class="modal-content6">
+            <a href="catalog.html" class="modal-link6">In packages</a>
+            <a href="catalog.html" class="modal-link6">By weigh</a>
+        </div>
+    </div>
+    <button type="button" class="catalog_button_7">Gift Baskets</button>
+    <button type="button" id="catalog_button_8" class="catalog_button_8">Soupd</button>
+    <div id="myModal8" class="modal8">
+        <div class="modal-content8">
+            <a href="catalog.html" class="modal-link8">In packages</a>
+            <a href="catalog.html" class="modal-link8">In packages</a>
+        </div>
+    </div>
+    <button type="button"  id="catalog_button_9" class="catalog_button_9">Sublimated Products</button>
+    <div id="myModal9" class="modal9">
+        <div class="modal-content9">
+            <a href="catalog.html" class="modal-link9">In packages</a>
+        </div>
+    </div>
+    <script src="/static/visit/js/script.js"></script>
+</div>
 
+<div id="container" class="container">
 <!--start swiper-->
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
@@ -290,24 +358,24 @@
 
 <!--start request-->
     <div class="request">
-         <p class="ostavit">Leave a request</p>
+         <p class="ostavit">Оставить запрос</p>
         <div class="request_container">
-            <form class="request_form" id="data">
-            <input type="email" class="request_email" placeholder="Whire E-mail " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+            <form class="request_form" id="data" method="post"> {% csrf_token %}
+            <input type="email" required class="request_email" placeholder="Whire E-mail " name="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
             <!--tel-->
             <!--input type="tel" class="request_tel" pattern="7[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Телефон"-->
             <!--tel-->
-            <input type="text" class="request_name" placeholder="Name">
-            <textarea class="request_message" placeholder="Message"></textarea>
+            <input type="text" required class="request_name" placeholder="Name" name="name">
+            <input type="text" required class="request_name" placeholder="Sity" name="sity">
+            <textarea class="request_message" required placeholder="Message" name="message"></textarea>
                 <div class="request_checkbox_div">
-                <a href="https://rosstat.gov.ru/politika-konfidencialnosti" class="request_legend">By leaving a request, you accept the privacy policy:</a>
-                <input type="checkbox" required class="request_checkbox">
+                    <a href="https://rosstat.gov.ru/politika-konfidencialnosti" class="request_legend">By leaving a request, you accept the privacy policy:</a>
+                    <input type="checkbox" required class="request_checkbox">
                 </div>
-            <button type="submit" class="request_button" form="data">Send</button>
+            <input type="submit" class="request_button" form="data" value="Send" name="ContactForm">
             </form>
         </div>
     </div>
-
 <!--edn request-->
 
 
@@ -316,9 +384,9 @@
       <p class="mailing">I want to be notified about new arrivals </p>
 
       <div class="container__item">
-        <form class="form" id="data1">
-          <input type="email" class="form__field" placeholder="Your E-Mail " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
-          <button type="submit" class="btn btn--primary btn--inside uppercase" form="data1">send</button>
+        <form class="form" id="data1" method="post"> {% csrf_token %}
+          <input type="email" required class="form__field" name="mail_mailler" placeholder="Your E-Mail " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+          <input type="submit" class="btn btn--primary btn--inside uppercase" form="data1" value="Send" name="Mailing">
           <div class="form_checkbox_div">
             <a href="https://rosstat.gov.ru/politika-konfidencialnosti" class="form_legend">By leaving a request, you accept the privacy policy:</a>
             <input type="checkbox" required class="form_checkbox">
@@ -328,36 +396,33 @@
     </div>
 <!--edn mailing list-->
 
-<!--Start footer-->
+</div>
 
+<!--Start footer-->
     <footer class="footer">
         <div class="footer_wrap">
-        <!--див для почты и телефона-->
-            <div class="footer_certificate">
-                <a href="certificate.html" id="certificate">Certificates</a>
-            </div>
-            <div class="footer_info">
-                <p>E-mail: ros-prodykt@yandex.ru <br>
-                Phone number: +7 (986) 953 14 33
+            <div class="first">
+                <p class="footer_info">E-mail: info@econaturprodukt.ru <br>
+                    Phone: +7 (986) 953 14 33
                 </p>
-                <!--вставляем в этот див картинку компании-->
+                <a href="https://api.whatsapp.com/send?phone=79869531433"><img class="whatsapp" src="/static/visit/icon/whatsapp.png"></a>
+            </div>
+            <div class="second">
+                <a href="#" class="links_style">About company</a>
+                <a href="#" class="links_style">Partners</a>
+                <a href="#" class="links_style">Cooperation</a>
+                <a href="#" class="links_style">Delivery</a>
+                <a href="#" class="links_style">Certificates</a>
+                <a href="#" class="links_style">Privacy policy</a>
+            </div>
+            <div class="third">
                 <p class="footer_company"><img src="/static/visit/logo/logo_compani.png"></p>
-
-            </div>
-            <!--див для картинки вацапа-->
-            <div class = "for_watsapp">
-                <a href="https://api.whatsapp.com/send?phone=79869531433" class="whatsapp"><img src="/static/visit/icon/whatsapp.png"></a>
-
-            </div>
-      <!--Див для нижней надписи с названием компании-->
-            <div class="footer_OOO">
-                <p>ООО 'ТК' ЭкоНатурПродукт'.</p>
+                <p class="footer_OOO">ООО 'ТК' ЭкоНатурПродукт'.</p>
             </div>
         </div>
     </footer>
-<!--End footer-->
+    <!--End footer-->
 
 
-</div>
   </body>
 </html>

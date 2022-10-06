@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <title>ЭкоНатурПродукт</title>
+    <link type="Image/x-icon" href="logo/logo_compani.ico" rel="icon">
+  </head>
+  <body>
+<div id="container">
+    <!--start header-->
+    <header class="header">
+        <div class="container header_container">
+  
+            <a href="index.html" class="logo">
+              <img src="logo/logo_compani.png" alt="logo">
+            </a>
+            <h1 class="name_header">Торговая Компания<br><p class="name_header_2">ЭкоНатурПродукт</p></h1>
+            <nav class="navi header_navi">
+              <a href="#" class="navi_link">КАТАЛОГ</a>
+              <a href="delivery.html" class="navi_link">ДОСТАВКА</a>
+              <a href="delivery_eng.html" class="navi_link">RUS <img class="flag" src="img/rus.jpg"></a>
+  
+            </nav>
+        </div>
+      </header>
+  <!--end header-->
+  
+
+  <!--start carousel picture-->
+  <div id="content-wrapper">
+		
+
+		<div class="column">
+			<img id=featured src="images/shoe1.jpg">
+
+			<div id="slide-wrapper" >
+				
+
+				<div id="slider">
+					<img class="thumbnail active" src="images/shoe1.jpg">
+					<img class="thumbnail" src="images/shoe2.jpg">
+					<img class="thumbnail" src="images/shoe3.jpg">
+
+					
+				</div>
+
+			
+			</div>
+		</div>
+
+		<div class="column">
+			<h1>Название продукта</h1>
+			<hr>
+			<h3>999 руб.</h3>
+      <h4>id 1</h4>
+
+			<p>описание</p>
+      <br>
+      <h3>Характеристики</h3>
+      <p>...</p>
+
+			
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+		let thumbnails = document.getElementsByClassName('thumbnail')
+
+		let activeImages = document.getElementsByClassName('active')
+
+		for (var i=0; i < thumbnails.length; i++){
+
+			thumbnails[i].addEventListener('mouseover', function(){
+				console.log(activeImages)
+				
+				if (activeImages.length > 0){
+					activeImages[0].classList.remove('active')
+				}
+				
+
+				this.classList.add('active')
+				document.getElementById('featured').src = this.src
+			})
+		}
+
+
+		let buttonRight = document.getElementById('slideRight');
+		let buttonLeft = document.getElementById('slideLeft');
+
+		buttonLeft.addEventListener('click', function(){
+			document.getElementById('slider').scrollLeft -= 180
+		})
+
+		buttonRight.addEventListener('click', function(){
+			document.getElementById('slider').scrollLeft += 180
+		})
+
+
+	</script>
+
+  <!--end carousel picture-->
+
+
+
+<!--Start footer-->
+<footer class="footer">
+    <div class="footer_wrap">
+    <!--див для почты и телефона-->
+        <div class="footer_certificate">
+            <a href="certificate.html" id="certificate">Сертификаты</a>
+        </div>
+        <div class="footer_info">
+            <p>Почта: ros-prodykt@yandex.ru <br>
+            Телефон: +7 (986) 953 14 33
+            </p>
+            <!--вставляем в этот див картинку компании-->
+            <p class="footer_company"><img src="logo/logo_compani.png"></p>
+
+        </div>
+        <!--див для картинки вацапа-->
+        <div class = "for_watsapp">
+            <a href="https://api.whatsapp.com/send?phone=79869531433" class="whatsapp"><img src="icon/whatsapp.png"></a>
+
+        </div>
+  <!--Див для нижней надписи с названием компании-->
+        <div class="footer_OOO">
+            <p>ООО 'ТК' ЭкоНатурПродукт'.</p>
+        </div>
+    </div>
+</footer>
+<!--End footer-->
+
+
+</div>
+</body>
+</html>

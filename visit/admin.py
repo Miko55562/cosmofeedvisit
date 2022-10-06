@@ -29,7 +29,7 @@ class PhotoAdmin(admin.ModelAdmin):
 
 
 class ContactFormAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'mail', 'created_at')
+    list_display = ('id', 'name', 'mail', 'sity', 'created_at')
     list_display_links = ('id', 'name')
     search_fields = ('id', 'name', 'mail')
 

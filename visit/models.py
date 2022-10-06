@@ -83,7 +83,8 @@ class Photo(models.Model):
 class ContactForm(models.Model):
     name = models.CharField(max_length=150, verbose_name='Имя')
     mail = models.EmailField(verbose_name='Электронная почта')
-    message = models.CharField(max_length=150, verbose_name='Сообщение')
+    sity = models.CharField(max_length=150, verbose_name='Город')
+    message = models.TextField(max_length=150, verbose_name='Сообщение')
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
