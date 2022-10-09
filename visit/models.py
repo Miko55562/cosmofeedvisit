@@ -16,7 +16,6 @@ class Category(models.Model):
 
 class Subcategory(models.Model):
     title = models.CharField(max_length=150, db_index=True, verbose_name='Подкатегория')
-    parent = models.ForeignKey('Category', on_delete=models.PROTECT, null=True, verbose_name='Категория')
 
     def __str__(self):
         return self.title
@@ -25,13 +24,30 @@ class Subcategory(models.Model):
     class Meta:
         verbose_name = 'Подкатегория'
         verbose_name_plural = 'Подкатегории'
-        ordering = ['parent']
+        ordering = ['title']
 
 
 class Product(models.Model):
     name = models.CharField(max_length=150, verbose_name='Название')
 
-    product_code = models.CharField(max_length=150, verbose_name='Код Товара', null=True)
+    product_code = models.CharField(max_length=150, verbose_name='Код Товара 1', null=True)
+    weight = models.CharField(max_length=150, verbose_name='Вес продукции 1', null=True)
+
+    product_code_2 = models.CharField(max_length=150, verbose_name='Код Товара 2', null=True)
+    weight_2 = models.CharField(max_length=150, verbose_name='Вес продукции 2', null=True)
+
+    product_code_3 = models.CharField(max_length=150, verbose_name='Код Товара 3', null=True)
+    weight_3 = models.CharField(max_length=150, verbose_name='Вес продукции 3', null=True)
+
+    product_code_4 = models.CharField(max_length=150, verbose_name='Код Товара 4', null=True)
+    weight_4 = models.CharField(max_length=150, verbose_name='Вес продукции 4', null=True)
+
+    product_code_5 = models.CharField(max_length=150, verbose_name='Код Товара 5', null=True)
+    weight_5 = models.CharField(max_length=150, verbose_name='Вес продукции 5', null=True)
+
+    product_code_6 = models.CharField(max_length=150, verbose_name='Код Товара 6', null=True)
+    weight_6 = models.CharField(max_length=150, verbose_name='Вес продукции 6', null=True)
+
     product_sku = models.CharField(max_length=150, verbose_name='Артикул товара', null=True)
 
     manufacturer = models.CharField(max_length=150, verbose_name='Производитель', null=True)
@@ -45,16 +61,13 @@ class Product(models.Model):
     energy_value = models.CharField(max_length=150, verbose_name='Энергетическая ценность', null=True)
     best_before_date = models.CharField(max_length=150, verbose_name='Срок годности', null=True)
     type_of_packaging = models.CharField(max_length=150, verbose_name='Тип упаковки', null=True)
-    weight = models.CharField(max_length=150, verbose_name='Вес продукции', null=True)
     price_is_for = models.CharField(max_length=150, verbose_name='Цена указана за', null=True)
 
     availability = models.BooleanField(default=True, verbose_name='Наличие товара')
     is_published = models.BooleanField(default=True, verbose_name='Опубликовано')
 
-    category = models.ForeignKey('Category', on_delete=models.PROTECT, null=True, verbose_name='Категория')
-    subcategory = ChainedForeignKey(Subcategory, show_all=False,
-        auto_choose=True,
-        sort=True)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
+    subcategory =  models.ForeignKey(Subcategory, on_delete=models.CASCADE, verbose_name='Подкатегория')
 
     def __str__(self):
         return self.name
@@ -64,6 +77,19 @@ class Product(models.Model):
         verbose_name = 'Продукт'
         verbose_name_plural = 'Продукты'
         ordering = ['name']
+
+
+class AllowedCombination(models.Model):
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
+    subcategory =  models.ForeignKey(Subcategory, on_delete=models.CASCADE, verbose_name='Подкатегория')
+
+    def __str__(self):
+        return f'{self.category} {self.subcategory}'
+
+
+    class Meta:
+        verbose_name = 'Комбинацию'
+        verbose_name_plural = 'Комбинации'
 
 
 class Photo(models.Model):
