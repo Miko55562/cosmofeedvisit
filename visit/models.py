@@ -3,6 +3,7 @@ from smart_selects.db_fields import ChainedForeignKey
 
 class Category(models.Model):
     title = models.CharField(max_length=150, db_index=True, verbose_name='Категория')
+    slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name='URL')
 
     def __str__(self):
         return self.title
@@ -16,6 +17,7 @@ class Category(models.Model):
 
 class Subcategory(models.Model):
     title = models.CharField(max_length=150, db_index=True, verbose_name='Подкатегория')
+    parent_category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.title
@@ -68,6 +70,7 @@ class Product(models.Model):
 
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
     subcategory =  models.ForeignKey(Subcategory, on_delete=models.CASCADE, verbose_name='Подкатегория')
+    
 
     def __str__(self):
         return self.name
