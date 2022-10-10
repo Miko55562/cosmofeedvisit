@@ -10,4 +10,5 @@ urlpatterns = [
     path('category/<slug:category_slug>', catalog_subcat, name='category'),
     path("robots.txt", robots),
     path('catalog_subcat', catalog_subcat),
+    path('product_big', product_big),
 ]

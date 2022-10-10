@@ -43,18 +43,29 @@ def category(request, category_id):
     return render(request, template_name='visit/catalog.html', context=context)
 
 def catalog_subcat(request, category_slug):
+    categories = Category.objects.all()
     category = Category.objects.get(slug=category_slug)
     products = Product.objects.filter(category_id = category.id)
     context = {
+    'categories': categories,
     'products': products,
     }
     return render(request, template_name='visit/catalog_subcat.html', context=context)
 
 def catalog(request):
-    return render(request, template_name='visit/catalog.html')
+    categories = Category.objects.all()
+    context = {
+    'categories': categories,
+    }
+    return render(request, template_name='visit/catalog.html', context=context)
 
 def delivery(request):
-    return render(request, template_name='visit/delivery.html')
+    categories = Category.objects.all()
+    subcategories = Subcategory.objects.all()
+    context = {
+    'categories': categories,
+    }
+    return render(request, template_name='visit/delivery.html', context=context)
 
-def delivery_eng(request):
-    return render(request, template_name='visit/delivery_eng.html')
+def product_big(request):
+    return render(request, template_name='visit/product_big.html')

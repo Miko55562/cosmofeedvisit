@@ -2,50 +2,51 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/static/visit/css/main.css">
     <title>ЭкоНатурПродукт</title>
-    <link type="Image/x-icon" href="logo/logo_compani.ico" rel="icon">
+    <link type="Image/x-icon" href="/static/visit/logo/logo_compani.ico" rel="icon">
   </head>
   <body>
 <div id="container">
     <!--start header-->
     <header class="header">
-        <div class="container header_container">
-  
-            <a href="index.html" class="logo">
-              <img src="logo/logo_compani.png" alt="logo">
-            </a>
-            <h1 class="name_header">Торговая Компания<br><p class="name_header_2">ЭкоНатурПродукт</p></h1>
-            <nav class="navi header_navi">
-              <a href="#" class="navi_link">КАТАЛОГ</a>
-              <a href="delivery.html" class="navi_link">ДОСТАВКА</a>
-              <a href="delivery_eng.html" class="navi_link">RUS <img class="flag" src="img/rus.jpg"></a>
-  
-            </nav>
-        </div>
-      </header>
+      <div class="header_container">
+
+          <a href="/" class="logo">
+            <img src="/static/visit/logo/logo_compani.png" alt="logo">
+          </a>
+          <div class="header_info">
+              <p class="name_header">Торговая Компания</p>
+              <p class="name_header_2">ЭкоНатурПродукт</p>
+              <p class="name_header_3">г. Самара</p>
+              <nav class="navi header_navi">
+              </nav>
+          </div>
+            <a class="navi_link">Телефон:  +7 (986) 953 14 33 <br><br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp+7 (846) 207 56 54<br><br>&nbsp &nbsp &nbsp &nbsp info@econaturprodukt.ru</a>
+      </div>
+    </header>
   <!--end header-->
-  
+
 
   <!--start carousel picture-->
   <div id="content-wrapper">
-		
+
 
 		<div class="column">
-			<img id=featured src="images/shoe1.jpg">
+			<img id=featured src="/static/visit/images/shoe1.jpg">
 
 			<div id="slide-wrapper" >
-				
+
 
 				<div id="slider">
-					<img class="thumbnail active" src="images/shoe1.jpg">
-					<img class="thumbnail" src="images/shoe2.jpg">
-					<img class="thumbnail" src="images/shoe3.jpg">
+					<img class="thumbnail active" src="/static/visit/images/shoe1.jpg">
+					<img class="thumbnail" src="/static/visit/images/shoe2.jpg">
+					<img class="thumbnail" src="/static/visit/images/shoe3.jpg">
 
-					
+
 				</div>
 
-			
+
 			</div>
 		</div>
 
@@ -60,7 +61,7 @@
       <h3>Характеристики</h3>
       <p>...</p>
 
-			
+
 		</div>
 
 	</div>
@@ -74,11 +75,11 @@
 
 			thumbnails[i].addEventListener('mouseover', function(){
 				console.log(activeImages)
-				
+
 				if (activeImages.length > 0){
 					activeImages[0].classList.remove('active')
 				}
-				
+
 
 				this.classList.add('active')
 				document.getElementById('featured').src = this.src
@@ -107,26 +108,24 @@
 <!--Start footer-->
 <footer class="footer">
     <div class="footer_wrap">
-    <!--див для почты и телефона-->
-        <div class="footer_certificate">
-            <a href="certificate.html" id="certificate">Сертификаты</a>
-        </div>
-        <div class="footer_info">
-            <p>Почта: ros-prodykt@yandex.ru <br>
-            Телефон: +7 (986) 953 14 33
+        <div class="first">
+            <p class="footer_info">Почта: info@econaturprodukt.ru <br>
+                Телефон: +7 (986) 953 14 33<br>
+                +7 (846) 207 56 54
             </p>
-            <!--вставляем в этот див картинку компании-->
-            <p class="footer_company"><img src="logo/logo_compani.png"></p>
-
+            <a href="https://api.whatsapp.com/send?phone=79869531433"><img class="whatsapp" src="/static/visit/icon/whatsapp.png"></a>
         </div>
-        <!--див для картинки вацапа-->
-        <div class = "for_watsapp">
-            <a href="https://api.whatsapp.com/send?phone=79869531433" class="whatsapp"><img src="icon/whatsapp.png"></a>
-
+        <div class="second">
+            <a href="#" class="links_style">О компании</a>
+            <a href="#" class="links_style">Партнеры</a>
+            <a href="#" class="links_style">Сотрудничество</a>
+            <a href="delivery" class="links_style">Доставка</a>
+            <a href="#" class="links_style">Сертификаты</a>
+            <a href="https://rosstat.gov.ru/politika-konfidencialnosti" class="links_style">Политика конфеденциальности</a>
         </div>
-  <!--Див для нижней надписи с названием компании-->
-        <div class="footer_OOO">
-            <p>ООО 'ТК' ЭкоНатурПродукт'.</p>
+        <div class="third">
+            <p class="footer_company"><img src="/static/visit/logo/logo_compani.png"></p>
+            <p class="footer_OOO">ООО 'ТК' ЭкоНатурПродукт'.</p>
         </div>
     </div>
 </footer>

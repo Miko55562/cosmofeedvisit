@@ -55,6 +55,13 @@
     </div>
   </header>
   <!--end header-->
+  <div class="catalog">
+    {% for category in categories %}
+      <a type="button" id="catalog_button_0" class="catalog_button_0" href="{% url 'category' category.slug %}">{{ category.title }}</a>
+   {% endfor %}
+
+      <script src="/static/visit/js/script.js"></script>
+  </div>
   <!--
   <div class="catalog">
     <button type="button" id="catalog_button_10" class="catalog_button_0">Все</button>
