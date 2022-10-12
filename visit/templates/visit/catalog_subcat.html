@@ -48,7 +48,7 @@
     <div class="catalog_header">
       {% for item in subcategories %}
       <div class="cal_button_0">
-        <a href="{% url 'catalog_subcategory' category_slug item.slug %}">{{ item.title }}</a>
+        <a class="test_0" href="{% url 'catalog_subcategory' category_slug item.slug %}">{{ item.title }}</a>
       </div>
       {% endfor %}
     </div>

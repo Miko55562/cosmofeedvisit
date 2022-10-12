@@ -625,6 +625,11 @@ body{
     border-bottom: 1px solid;
 }
 
+.test_0{
+    text-decoration: none;
+    color: black;
+}
+
 .cal_button_0{
     margin-top: 5px;
     width: 120px;
