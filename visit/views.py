@@ -4,6 +4,7 @@ from .models import Category
 from .models import Subcategory
 from .models import ContactForm
 from .models import Malling
+from .models import CaruselProduct
 from django.core.mail import send_mail
 
 
@@ -26,10 +27,12 @@ def index(request):
 
     categories = Category.objects.all()
     subcategories = Subcategory.objects.all()
+    carusel_product = CaruselProduct.objects.order_by('product')
+    print(carusel_product)
     context = {
     'categories': categories,
+    'carusel_product': carusel_product,
     }
-    print(subcategories)
     return render(request, template_name='visit/index.html', context=context)
 
 def category(request, category_id):

@@ -54,7 +54,7 @@ class PartnerAdmin(admin.ModelAdmin):
 
 
 class CaruselProductAdmin(admin.ModelAdmin):
-    list_display = ['id']
+    list_display = ['id', 'product']
 
 
 class CatalogFileAdmin(admin.ModelAdmin):
