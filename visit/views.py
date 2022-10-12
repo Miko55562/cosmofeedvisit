@@ -42,13 +42,32 @@ def category(request, category_id):
 
     return render(request, template_name='visit/catalog.html', context=context)
 
-def catalog_subcat(request, category_slug):
+def catalog_category(request, category_slug):
     categories = Category.objects.all()
     category = Category.objects.get(slug=category_slug)
     products = Product.objects.filter(category_id = category.id)
+    subcategories = Subcategory.objects.filter(category_id=category.id)
     context = {
+    'subcategories': subcategories,
     'categories': categories,
     'products': products,
+    'category_slug': category_slug,
+    }
+    return render(request, template_name='visit/catalog_subcat.html', context=context)
+
+def catalog_subcategory(request, category_slug, subcategory_slug):
+    categories = Category.objects.all()
+    category = Category.objects.get(slug=category_slug)
+    subcategory = Subcategory.objects.get(slug=subcategory_slug)
+    subcategories = Subcategory.objects.filter(category_id=category.id)
+    print(subcategories)
+    products = Product.objects.filter(category_id = category.id,
+                                      subcategory_id = subcategory.id)
+    context = {
+    'subcategories': subcategories,
+    'categories': categories,
+    'products': products,
+    'category_slug': category_slug,
     }
     return render(request, template_name='visit/catalog_subcat.html', context=context)
 

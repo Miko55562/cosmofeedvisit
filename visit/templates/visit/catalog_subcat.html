@@ -46,18 +46,17 @@
   </header>
   <header class="header_2">
     <div class="catalog_header">
+      {% for item in subcategories %}
       <div class="cal_button_0">
-        <p>Подкатегория 1</p>
+        <a href="{% url 'catalog_subcategory' category_slug item.slug %}">{{ item.title }}</a>
       </div>
-      <div class="cal_button_1">
-        <p>Подкатегория 2</p>
-      </div>
+      {% endfor %}
     </div>
   </header>
   <!--end header-->
   <div class="catalog">
     {% for category in categories %}
-      <a type="button" id="catalog_button_0" class="catalog_button_0" href="{% url 'category' category.slug %}">{{ category.title }}</a>
+      <a type="button" id="catalog_button_0" class="catalog_button_0" href="{% url 'catalog_category' category.slug %}">{{ category.title }}</a>
    {% endfor %}
 
       <script src="/static/visit/js/script.js"></script>
