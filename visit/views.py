@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Product
+from .models import Photo
 from .models import Category
 from .models import Subcategory
 from .models import ContactForm
@@ -46,9 +47,12 @@ def catalog_subcat(request, category_slug):
     categories = Category.objects.all()
     category = Category.objects.get(slug=category_slug)
     products = Product.objects.filter(category_id = category.id)
+    photos = Photo.objects.get(product=5)
+    print(photos)
     context = {
     'categories': categories,
     'products': products,
+    'photos': photos,
     }
     return render(request, template_name='visit/catalog_subcat.html', context=context)
 
