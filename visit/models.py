@@ -34,27 +34,40 @@ class Product(models.Model):
 
     product_code = models.CharField(max_length=150, verbose_name='Код Товара 1', null=True, blank=True)
     weight = models.CharField(max_length=150, verbose_name='Вес продукции 1', null=True, blank=True)
+    prise = models.CharField(max_length=150, verbose_name='Цена продукции 1', null=True, blank=True)
 
     product_code_2 = models.CharField(max_length=150, verbose_name='Код Товара 2', null=True, blank=True)
     weight_2 = models.CharField(max_length=150, verbose_name='Вес продукции 2', null=True, blank=True)
+    prise_2 = models.CharField(max_length=150, verbose_name='Цена продукции 1', null=True, blank=True)
 
     product_code_3 = models.CharField(max_length=150, verbose_name='Код Товара 3', null=True, blank=True)
     weight_3 = models.CharField(max_length=150, verbose_name='Вес продукции 3', null=True, blank=True)
+    prise_3 = models.CharField(max_length=150, verbose_name='Цена продукции 1', null=True, blank=True)
 
     product_code_4 = models.CharField(max_length=150, verbose_name='Код Товара 4', null=True, blank=True)
     weight_4 = models.CharField(max_length=150, verbose_name='Вес продукции 4', null=True, blank=True)
+    prise_4 = models.CharField(max_length=150, verbose_name='Цена продукции 1', null=True, blank=True)
 
     product_code_5 = models.CharField(max_length=150, verbose_name='Код Товара 5', null=True, blank=True)
     weight_5 = models.CharField(max_length=150, verbose_name='Вес продукции 5', null=True, blank=True)
+    prise_5 = models.CharField(max_length=150, verbose_name='Цена продукции 1', null=True, blank=True)
 
     product_code_6 = models.CharField(max_length=150, verbose_name='Код Товара 6', null=True, blank=True)
     weight_6 = models.CharField(max_length=150, verbose_name='Вес продукции 6', null=True, blank=True)
+    prise_6 = models.CharField(max_length=150, verbose_name='Цена продукции 1', null=True, blank=True)
 
     product_sku = models.CharField(max_length=150, verbose_name='Артикул товара', null=True, blank=True)
 
     manufacturer = models.CharField(max_length=150, verbose_name='Производитель', null=True, blank=True)
 
     description = models.TextField(blank=True, verbose_name='Описание', null=True)
+
+    image_1 = models.ImageField(blank = True, verbose_name='Главное фото продукта')
+    image_2 = models.ImageField(blank = True, verbose_name='Фото продукта')
+    image_3 = models.ImageField(blank = True, verbose_name='Фото продукта')
+    image_4 = models.ImageField(blank = True, verbose_name='Фото продукта')
+    image_5 = models.ImageField(blank = True, verbose_name='Фото продукта')
+    image_6 = models.ImageField(blank = True, verbose_name='Фото продукта')
 
     # Характеристики
     country_of_origin = models.CharField(max_length=150, verbose_name='Страна производства', null=True, blank=True)
@@ -95,17 +108,6 @@ class AllowedCombination(models.Model):
         verbose_name_plural = 'Комбинации'
 
 
-class Photo(models.Model):
-    product = models.ForeignKey('Product', on_delete=models.CASCADE, verbose_name='Продукт')
-    image = models.ImageField(blank = True)
-
-
-    class Meta:
-        verbose_name = 'Фото продукта'
-        verbose_name_plural = 'Фото продуктов'
-        ordering = ['product']
-
-
 class ContactForm(models.Model):
     name = models.CharField(max_length=150, verbose_name='Имя')
     mail = models.EmailField(verbose_name='Электронная почта')
@@ -131,4 +133,30 @@ class Malling(models.Model):
     class Meta:
         verbose_name = 'Рассылка'
         verbose_name_plural = 'Рассылки'
+        ordering = ['id']
+
+
+class Partner(models.Model):
+    image = models.ImageField(blank = True, verbose_name='Логотип')
+
+    class Meta:
+        verbose_name = 'Партнёра'
+        verbose_name_plural = 'Партнеры'
+        ordering = ['id']
+
+
+class CaruselProduct(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name='Продукт')
+
+    class Meta:
+        verbose_name = 'Продукт'
+        verbose_name_plural = 'Карусель Продуктов'
+        ordering = ['id']
+
+class CatalogFile(models.Model):
+    file = models.FileField(upload_to='CatalogFile', verbose_name='Файл')
+
+    class Meta:
+        verbose_name = 'Файл каталога'
+        verbose_name_plural = 'Файлы каталога'
         ordering = ['id']

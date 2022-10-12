@@ -33,17 +33,33 @@
 
 
 		<div class="column">
-			<img id=featured src="/static/visit/images/shoe1.jpg">
-
+      {% if product.image_1 %}
+			<img id=featured src="/media/{{ product.image_1 }}">
+      {% else %}
+      <img id=featured>
+      {% endif %}
 			<div id="slide-wrapper" >
 
 
 				<div id="slider">
-					<img class="thumbnail active" src="/static/visit/images/shoe1.jpg">
-					<img class="thumbnail" src="/static/visit/images/shoe2.jpg">
-					<img class="thumbnail" src="/static/visit/images/shoe3.jpg">
-
-
+          {% if product.image_1 %}
+					<img class="thumbnail active" src="/media/{{ product.image_1 }}">
+          {% endif %}
+          {% if product.image_2 %}
+					<img class="thumbnail active" src="/media/{{ product.image_2 }}">
+          {% endif %}
+          {% if product.image_3 %}
+          <img class="thumbnail active" src="/media/{{ product.image_3 }}">
+          {% endif %}
+          {% if product.image_4 %}
+          <img class="thumbnail active" src="/media/{{ product.image_4 }}">
+          {% endif %}
+          {% if product.image_5 %}
+          <img class="thumbnail active" src="/media/{{ product.image_5 }}">
+          {% endif %}
+          {% if product.image_6 %}
+          <img class="thumbnail active" src="/media/{{ product.image_6 }}">
+          {% endif %}
 				</div>
 
 
@@ -51,16 +67,42 @@
 		</div>
 
 		<div class="column">
-			<h1>Название продукта</h1>
+			<h1>{{ product.name }}</h1>
 			<hr>
-			<h3>999 руб.</h3>
-      <h4>id 1</h4>
+			<h3>{{ product.prise }}</h3>
+      <h4>id {{ product.pk }}</h4>
 
-			<p>описание</p>
+			<p>{{ product.description }}</p>
       <br>
       <h3>Характеристики</h3>
-      <p>...</p>
 
+      {% if product.country_of_origin %}
+      <p>Страна производства: {{ product.country_of_origin }}</p>
+      {% endif %}
+
+      {% if product.composition %}
+      <p>Состав: {{ product.composition }}</p>
+      {% endif %}
+
+      {% if product.nutritional_value_of_100_grams %}
+      <p>Пищевая ценность 100 грамм: {{ product.nutritional_value_of_100_grams }}</p>
+      {% endif %}
+
+      {% if product.energy_value %}
+      <p>Энергетическая ценность: {{ product.energy_value }}</p>
+      {% endif %}
+
+      {% if product.best_before_date %}
+      <p>Срок годности: {{ product.best_before_date }}</p>
+      {% endif %}
+
+      {% if product.type_of_packaging %}
+      <p>Тип упаковки: {{ product.type_of_packaging }}</p>
+      {% endif %}
+
+      {% if product.price_is_for %}
+      <p>Цена указана за: {{ product.price_is_for }}</p>
+      {% endif %}
 
 		</div>
 
@@ -119,7 +161,7 @@
             <a href="#" class="links_style">О компании</a>
             <a href="#" class="links_style">Партнеры</a>
             <a href="#" class="links_style">Сотрудничество</a>
-            <a href="delivery" class="links_style">Доставка</a>
+            <a href="/delivery" class="links_style">Доставка</a>
             <a href="#" class="links_style">Сертификаты</a>
             <a href="https://rosstat.gov.ru/politika-konfidencialnosti" class="links_style">Политика конфеденциальности</a>
         </div>

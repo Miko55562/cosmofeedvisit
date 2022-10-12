@@ -22,44 +22,38 @@
   transform: scale(1);
 
 }
-.wrapper .container .bottom {
+
+.wrapper .bottom {
   width: 200%;
-  height: 300px;
+  height: 100%;
   transition: transform 0.5s;
   position: absolute;
+  background: #f2f2f2;
 }
 
-.wrapper .container .bottom h1 {
-  margin: 0;
-  padding: 0;
-}
-.wrapper .container .bottom p {
-  margin: 0;
-  padding: 0;
-}
 .wrapper .container .bottom .left {
-  height: 100%;
+  max-height: 1px;
   width: 50%;
-  background: #f2f2f2;
   position: relative;
 }
 .wrapper .container .bottom .left .details {
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    margin-left: auto;
-    margin-right: auto;
     color: #000;
-    width: 80%;
-    text-align: center;
+    width: 100%;
     text-decoration: none;
+    position: relative;
+    text-align: left;
+    font-size: 20px;
+}
+
+.name{
+    font-size: 23px;
 }
 
 .details_id{
-    text-align: right;
-    margin-right: 20px;
-    text-align: center;
     text-decoration: none;
+    margin-left: 10px;
 }
 
 .a{

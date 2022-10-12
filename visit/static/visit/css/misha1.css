@@ -22,25 +22,18 @@
   transform: scale(1);
 
 }
-.wrapper .container .bottom {
+
+.wrapper .bottom {
   width: 200%;
-  height: 300px;
+  height: 100%;
   transition: transform 0.5s;
   position: absolute;
+  background: #f2f2f2;
 }
 
-.wrapper .container .bottom h1 {
-  margin: 0;
-  padding: 0;
-}
-.wrapper .container .bottom p {
-  margin: 0;
-  padding: 0;
-}
 .wrapper .container .bottom .left {
-  height: 100%;
+  max-height: 1px;
   width: 50%;
-  background: #f2f2f2;
   position: relative;
 }
 .wrapper .container .bottom .left .details {
