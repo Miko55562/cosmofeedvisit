@@ -1333,3 +1333,14 @@ img{
 
 /*carousel picture*/
 /*--------------------------------------------------------------*/
+
+.image{
+    display: flex;
+    flex-direction: column;
+    width: 130px;
+    left: 25%;
+    margin: auto;
+    margin-top: 50px;
+
+    align-items: center;
+}

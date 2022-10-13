@@ -6,6 +6,7 @@ from .models import ContactForm
 from .models import Malling
 from .models import CaruselProduct
 from .models import CatalogFile
+from .models import Partner
 
 from django.core.mail import send_mail
 import os
@@ -45,7 +46,9 @@ def index(request):
 
     categories = Category.objects.all()
     subcategories = Subcategory.objects.all()
-    carusel_product = CaruselProduct.objects.order_by('product')
+    products = CaruselProduct.objects.values_list('product', flat=True)
+    carusel_product = Product.objects.filter(pk__in=products).all()
+    print(products,carusel_product)
     context = {
     'categories': categories,
     'carusel_product': carusel_product,
@@ -130,3 +133,11 @@ def product_big(request, product_pk):
     'product':product
     }
     return render(request, template_name='visit/product_big.html', context=context)
+
+def partners(request):
+    partners = Partner.objects.all()
+    print(partners)
+    context = {
+    'partners':partners
+    }
+    return render(request, template_name='visit/partners.html', context=context)
