@@ -174,19 +174,19 @@
       <div class="request">
         <p class="ostavit">Оставить запрос</p>
         <div class="request_container">
-          <form class="request_form" id="data">
-            <input type="email" required class="request_email" placeholder="Введите E-Mail " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+          <form class="request_form" id="data" method="post"> {% csrf_token %}
+            <input type="email" required class="request_email" placeholder="Введите E-Mail " name="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
             <!--tel-->
             <!--input type="tel" class="request_tel" pattern="7[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Телефон"-->
             <!--tel-->
-            <input type="text" required class="request_name" placeholder="Имя">
-            <input type="text" required class="request_name" placeholder="Город">
-            <textarea class="request_message" required placeholder="Сообщение"></textarea>
+            <input type="text" required class="request_name" placeholder="Имя" name="name">
+            <input type="text" required class="request_name" placeholder="Город" name="sity">
+            <textarea class="request_message" required placeholder="Сообщение" name="message"></textarea>
             <div class="request_checkbox_div">
               <a href="https://rosstat.gov.ru/politika-konfidencialnosti" class="request_legend">Оставляя заявку, вы принимаете политику конфиденциальности:</a>
               <input type="checkbox" required class="request_checkbox">
             </div>
-            <button type="submit" class="request_button" form="data">Отправить</button>
+            <input type="submit" class="request_button" form="data" value="Отправить" name="ContactForm">
           </form>
         </div>
       </div>
@@ -199,9 +199,9 @@
         <p class="mailing">Я хочу получать сообщение о новых поступлениях </p>
 
         <div class="container__item">
-          <form class="form" id="data1">
-            <input type="email" required class="form__field" placeholder="Ваш E-Mail " />
-            <button type="submit" class="btn btn--primary btn--inside uppercase" form="data1">Отправить</button>
+          <form class="form" id="data1" method="post"> {% csrf_token %}
+          <input type="email" required class="form__field" name="mail_mailler" placeholder="Ваш E-Mail " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+          <input type="submit" class="btn btn--primary btn--inside uppercase" form="data1" value="Отправить" name="Mailing">
             <div class="form_checkbox_div">
               <a href="https://rosstat.gov.ru/politika-konfidencialnosti" class="form_legend">Оставляя заявку, вы принимаете политику конфиденциальности:</a>
               <input type="checkbox" required class="form_checkbox">
