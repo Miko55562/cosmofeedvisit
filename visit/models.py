@@ -1,5 +1,6 @@
 from django.db import models
 from smart_selects.db_fields import ChainedForeignKey
+from pytils import translit
 
 class Category(models.Model):
     title = models.CharField(max_length=150, db_index=True, verbose_name='Категория')
@@ -16,6 +17,11 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+
+    def get_image_path(self, filename):
+           path = ''.join(["media/",translit.slugify(filename)])
+           return path
+
     name = models.CharField(max_length=150, verbose_name='Название')
 
     product_code = models.CharField(max_length=150, verbose_name='Код Товара 1', null=True, blank=True)
@@ -48,12 +54,12 @@ class Product(models.Model):
 
     description = models.TextField(blank=True, verbose_name='Описание', null=True)
 
-    image_1 = models.ImageField(blank = True, verbose_name='Главное фото продукта')
-    image_2 = models.ImageField(blank = True, verbose_name='Фото продукта')
-    image_3 = models.ImageField(blank = True, verbose_name='Фото продукта')
-    image_4 = models.ImageField(blank = True, verbose_name='Фото продукта')
-    image_5 = models.ImageField(blank = True, verbose_name='Фото продукта')
-    image_6 = models.ImageField(blank = True, verbose_name='Фото продукта')
+    image_1 = models.ImageField(blank = True, verbose_name='Главное фото продукта', upload_to=get_image_path)
+    image_2 = models.ImageField(blank = True, verbose_name='Фото продукта', upload_to=get_image_path)
+    image_3 = models.ImageField(blank = True, verbose_name='Фото продукта', upload_to=get_image_path)
+    image_4 = models.ImageField(blank = True, verbose_name='Фото продукта', upload_to=get_image_path)
+    image_5 = models.ImageField(blank = True, verbose_name='Фото продукта', upload_to=get_image_path)
+    image_6 = models.ImageField(blank = True, verbose_name='Фото продукта', upload_to=get_image_path)
 
     # Характеристики
     country_of_origin = models.CharField(max_length=150, verbose_name='Страна производства', null=True, blank=True)
@@ -68,7 +74,6 @@ class Product(models.Model):
     is_published = models.BooleanField(default=True, verbose_name='Опубликовано')
 
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
-
 
     def __str__(self):
         return self.name
@@ -109,7 +114,10 @@ class Malling(models.Model):
 
 
 class Partner(models.Model):
-    image = models.ImageField(blank = True, verbose_name='Логотип')
+    def get_image_path(self, filename):
+           path = ''.join(["media/",translit.slugify(filename)])
+           return path
+    image = models.ImageField(blank = True, verbose_name='Логотип', upload_to=get_image_path)
 
     class Meta:
         verbose_name = 'Партнёра'
