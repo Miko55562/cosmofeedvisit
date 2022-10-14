@@ -14,7 +14,6 @@ body{
     position:relative;
     overflow: auto;
     padding-bottom: 8%;
-
     min-width: 1100px;
     margin:auto;
 }
@@ -652,12 +651,12 @@ img{
     max-width: 1300px;
     left: 25%;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 70px;
     width: 100%;
     align-items: center;
     background: #fff;
     border-radius: 20px;
-    padding-bottom: 0;
+    padding-bottom: 60px;
 }
 
     .header_container{
@@ -1045,7 +1044,7 @@ img{
     border-top: 2px solid;
     bottom: 0;
     width: 100%;
-
+    height: 5%;
 }
 
 .footer_wrap{
@@ -1073,7 +1072,7 @@ img{
 .whatsapp{
     width: 70px;
     height: 70px;
-    margin-top: 70px;
+    margin-top: 80px;
     margin-left: 400px;
     filter: grayscale(1); /* Черно-белый фильтр для изображения */
     transition: 0.5s;
@@ -1130,9 +1129,21 @@ img{
   line-height:50px;
   font-size: 20px;
   font-weight:500;
-  padding-bottom: 150px;
+  overflow: auto;
 
 }
+
+.delivery_1{
+      text-align: center;
+      margin: auto;
+      max-width: 1000px;
+      margin-top: 50px;
+      line-height:50px;
+      font-size: 20px;
+      font-weight:500;
+      overflow: auto;
+}
+
 .fow_watsapp_delivery{
   width: 100px;
   height: 100px;
