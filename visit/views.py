@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from .models import Product
 from .models import Category
-from .models import Subcategory
 from .models import ContactForm
 from .models import Malling
 from .models import CaruselProduct
@@ -45,7 +44,6 @@ def index(request):
         Malling.objects.get_or_create(mail=request_name)
 
     categories = Category.objects.all()
-    subcategories = Subcategory.objects.all()
     products = CaruselProduct.objects.values_list('product', flat=True)
     carusel_product = Product.objects.filter(pk__in=products).all()
     print(products,carusel_product)
@@ -59,13 +57,6 @@ def category(request, category_id):
     if request.method == 'GET' and request.GET.get('download'):
         return download(request)
 
-    subcategory = Subcategory.objects.filter(category_id = category_id)
-    context = {
-    'subcategory': subcategory,
-    }
-    if len(subcategory) == 0:
-        raise Http404()
-
     return render(request, template_name='visit/catalog.html', context=context)
 
 def catalog_category(request, category_slug):
@@ -75,9 +66,7 @@ def catalog_category(request, category_slug):
     categories = Category.objects.all()
     category = Category.objects.get(slug=category_slug)
     products = Product.objects.filter(category_id = category.id)
-    subcategories = Subcategory.objects.filter(category_id=category.id)
     context = {
-    'subcategories': subcategories,
     'categories': categories,
     'products': products,
     'category_slug': category_slug,
@@ -90,13 +79,9 @@ def catalog_subcategory(request, category_slug, subcategory_slug):
 
     categories = Category.objects.all()
     category = Category.objects.get(slug=category_slug)
-    subcategory = Subcategory.objects.get(slug=subcategory_slug)
-    subcategories = Subcategory.objects.filter(category_id=category.id)
-    print(subcategories)
     products = Product.objects.filter(category_id = category.id,
                                       subcategory_id = subcategory.id)
     context = {
-    'subcategories': subcategories,
     'categories': categories,
     'products': products,
     'category_slug': category_slug,
@@ -118,7 +103,6 @@ def delivery(request):
         return download(request)
 
     categories = Category.objects.all()
-    subcategories = Subcategory.objects.all()
     context = {
     'categories': categories,
     }

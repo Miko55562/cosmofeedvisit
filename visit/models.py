@@ -15,21 +15,6 @@ class Category(models.Model):
         ordering = ['title']
 
 
-class Subcategory(models.Model):
-    title = models.CharField(max_length=150, db_index=True, verbose_name='Подкатегория')
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, blank=True)
-    slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name='URL')
-
-    def __str__(self):
-        return self.title
-
-
-    class Meta:
-        verbose_name = 'Подкатегория'
-        verbose_name_plural = 'Подкатегории'
-        ordering = ['title']
-
-
 class Product(models.Model):
     name = models.CharField(max_length=150, verbose_name='Название')
 
@@ -83,7 +68,6 @@ class Product(models.Model):
     is_published = models.BooleanField(default=True, verbose_name='Опубликовано')
 
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
-    subcategory =  models.ForeignKey(Subcategory, on_delete=models.CASCADE, verbose_name='Подкатегория')
 
 
     def __str__(self):
@@ -94,19 +78,6 @@ class Product(models.Model):
         verbose_name = 'Продукт'
         verbose_name_plural = 'Продукты'
         ordering = ['name']
-
-
-class AllowedCombination(models.Model):
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
-    subcategory =  models.ForeignKey(Subcategory, on_delete=models.CASCADE, verbose_name='Подкатегория')
-
-    def __str__(self):
-        return f'{self.category} {self.subcategory}'
-
-
-    class Meta:
-        verbose_name = 'Комбинацию'
-        verbose_name_plural = 'Комбинации'
 
 
 class ContactForm(models.Model):
