@@ -27,28 +27,29 @@
 <body>
 
   <!--start header-->
-<header class="header">
-        <div class="header_container">
-            <a href="/" class="logo">
-                <img src="/static/visit/logo/logo_compani.png" alt="logo">
-            </a>
-            <div class="header_info">
-                <p class="name_header">Торговая Компания</p>
-                <p class="name_header_2">ЭкоНатурПродукт</p>
-                <p class="name_header_3">г. Самара</p>
-            </div>
-                <a class="navi_link">Телефон:  +7 (986) 953 14 33 <br><br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp+7 (846) 207 56 54<br><br>&nbsp &nbsp &nbsp &nbsp info@econaturprodukt.ru</a>
+  <header class="header">
+          <div class="header_container">
 
-        </div>
-            <div class="price">
-                    <a class="price_style" href="?download=xlsx">Прайс</a>
-                    <div class="exel_png">
-                        <img src="/static/visit/icon/pdf.png">
-                    </div>
-            </div>
+              <a href="/" class="logo">
+                  <img src="/static/visit/logo/logo_compani.png" alt="logo">
+              </a>
+              <div class="header_info">
+                  <p class="name_header">Торговая Компания</p>
+                  <p class="name_header_2">ЭкоНатурПродукт</p>
+                  <p class="name_header_3">г. Самара</p>
+              </div>
+                  <a class="navi_link">Сот:  +7 (986) 953 14 33 <br><br> Офис:+7 (846) 207 56 54<br><br> info@econaturprodukt.ru</a>
 
-</header>
-<!--end header-->
+          </div>
+          <div class="price">
+                  <a class="price_style" href="?download=excel">Прайс-лист</a>
+                  <div class="exel_png">
+                      <img src="/static/visit/icon/pdf.png">
+                  </div>
+          </div>
+
+  </header>
+  <!--end header-->
   <div class="catalog">
     {% for category in categories %}
       <a type="button" id="catalog_button_0" class="catalog_button_0" href="{% url 'catalog_category' category.slug %}">{{ category.title }}</a>
@@ -151,31 +152,32 @@
    </a>
    {% endfor %}
 </div>
-  <!--Start footer-->
+<!--Start footer-->
 
-  <footer class="footer">
+<footer class="footer">
     <div class="footer_wrap">
-      <div class="first">
-        <p class="footer_info">Почта: info@econaturprodukt.ru <br>
-          Телефон: +7 (986) 953 14 33
-        </p>
-        <a href="https://api.whatsapp.com/send?phone=79869531433"><img class="whatsapp" src="/static/visit/icon/whatsapp.png"></a>
-      </div>
-      <div class="second">
-        <a href="#" class="links_style">О компании</a>
-        <a href="/partners" class="links_style">Партнеры</a>
-        <a href="#" class="links_style">Сотрудничество</a>
-        <a href="/delivery" class="links_style">Доставка</a>
-        <a href="#" class="links_style">Сертификаты</a>
-        <a href="https://rosstat.gov.ru/politika-konfidencialnosti" class="links_style">Политика конфеденциальности</a>
-      </div>
-      <div class="third">
-        <p class="footer_company"><img src="/static/visit/logo/logo_compani.png"></p>
-        <p class="footer_OOO">ООО 'ТК' ЭкоНатурПродукт'.</p>
-      </div>
+        <div class="first">
+            <p class="footer_info">Почта: info@econaturprodukt.ru <br>
+                Сот: +7 (986) 953 14 33<br>
+                Офис: +7 (846) 207 56 54
+            </p>
+            <a href="https://api.whatsapp.com/send?phone=79869531433"><img class="whatsapp" src="/static/visit/icon/whatsapp.png"></a>
+        </div>
+        <div class="second">
+            <a href="#" class="links_style">О компании</a>
+            <a href="/partners" class="links_style">Партнеры</a>
+            <a href="#" class="links_style">Сотрудничество</a>
+            <a href="/delivery" class="links_style">Доставка</a>
+            <a href="#" class="links_style">Сертификаты</a>
+            <a href="https://rosstat.gov.ru/politika-konfidencialnosti" class="links_style">Политика конфеденциальности</a>
+        </div>
+        <div class="third">
+            <p class="footer_company"><img src="/static/visit/logo/logo_compani.png"></p>
+            <p class="footer_OOO">ООО “ТК” ЭкоНатурПродукт”</p>
+        </div>
     </div>
-  </footer>
-  <!--End footer-->
+</footer>
+<!--End footer-->
 
 </body>
 </html>

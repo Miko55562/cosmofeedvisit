@@ -112,8 +112,10 @@ def product_big(request, product_pk):
     if request.method == 'GET' and request.GET.get('download'):
         return download(request)
 
+    categories = Category.objects.all()
     product = Product.objects.get(pk=product_pk)
     context = {
+    'categories': categories,
     'product':product
     }
     return render(request, template_name='visit/product_big.html', context=context)

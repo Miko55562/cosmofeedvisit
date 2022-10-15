@@ -88,7 +88,7 @@
 
           </div>
               <div class="price">
-                      <a class="price_style" href="#">Прайс-лист</a>
+                      <a class="price_style" href="?download=excel">Прайс-лист</a>
                       <div class="exel_png">
                           <img src="/static/visit/icon/pdf.png">
                       </div>
@@ -115,7 +115,11 @@
           <a class="a" href='/product/{{ item.pk }}'>
             <div class="wrapper">
               <div class="container">
+                {% if item.image_1 %}
+                <div class="top"> <img src="/media/{{ item.image_1 }}" width=100%> </div>
+                {% else %}
                 <div class="top"> <img src="https://cosmofeed.ru/image/cache/catalog/product/kosmicheskoe_pitanie/myasnye_blyuda/azu/azu_1-255x320.jpg" width=100%> </div>
+                {% endif %}
                 <div class="bottom">
                   <div class="left">
                     <div class="details">
@@ -236,7 +240,7 @@
             </div>
             <div class="third">
                 <p class="footer_company"><img src="/static/visit/logo/logo_compani.png"></p>
-                <p class="footer_OOO">ООО 'ТК' ЭкоНатурПродукт'.</p>
+                <p class="footer_OOO">ООО “ТК” ЭкоНатурПродукт”</p>
             </div>
         </div>
     </footer>

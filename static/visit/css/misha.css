@@ -1,68 +1,1276 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-.section {
+body{
+    font-family: "RobotoLight", Helvetica, Arial;
+    font-size: 18px;
+    font-style: normal;
+    overflow: hidden;
+    background: #e1e4e9; /*#e6eaec - bright, #e1e4e9 - dark*/
+    background-size: 30px 30px;
+    position:relative;
+    overflow: auto;
+    padding-bottom: 1%;
+    min-width: 1100px;
+    margin:auto;
+    background-size: cover;
+    height: 100%;
+}
+
+/*0*/
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Оставаться на месте */
+    margin-top: 13%; /* Сидеть на вершине */
+    margin-left: 300px;
+    left: 0;
+    top: 0;
+    text-decoration: none;
+    color: black;
+    background: none;
+    opacity: 1;
+}
+
+/* Модальное содержание/коробка */
+.modal-content {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-}
-.wrapper {
-  width: 313px;
-  height: 430px;
-  background: white;
-  margin: auto;
-  border-radius: 10px 10px 10px 10px;
-  border: 2px solid;
-  border-color: #f2f2f2;
-  box-shadow: 0;
-  transform: scale(0.95);
-  transition: box-shadow 0.5s, transform 0.5s;
-  z-index: 1;
-}
-.wrapper:hover {
-  transform: scale(1);
-
-}
-.wrapper .container .bottom {
-  width: 201%;
-  height: 105px;
-  transition: transform 0.5s;
+  background: none;
+  border: 1px solid #888;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  line-height: 1.5;
+  padding: 5px;
+  width: 190px; /* Полная ширина */
+  height: 100px; /* Полная высота */
 }
 
-.wrapper .container .bottom h1 {
-  margin: 0;
-  padding: 0;
-}
-.wrapper .container .bottom p {
-  margin: 0;
-  padding: 0;
-}
-.wrapper .container .bottom .left {
-  height: 100%;
-  width: 50%;
-  background: #ededed;
-  position: relative;
-  border-radius: 10px;
-}
-.wrapper .container .bottom .left .details {
-    display: flex;
-    flex-direction: column;
-    color: #000;
-    width: 100%;
+.modal-link{
     text-decoration: none;
-    position: relative;
-    text-align: left;
+    color: black;
     font-size: 20px;
 }
 
-.name{
-    font-size: 35px;
-    font-weight: 550;
+/*1*/
+.modal1 {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  margin-top: 15%; /* Сидеть на вершине */
+  margin-left: 300px;
+  left: 0;
+  top: 0;
+  text-decoration: none;
+  color: black;
+  background: none;
 }
 
-.details_id{
+/* Модальное содержание/коробка */
+.modal-content1 {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #888;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  line-height: 1.5;
+  padding: 5px;
+  width: 190px; /* Полная ширина */
+  height: 70px; /* Полная высота */
+}
+
+.modal-link1{
     text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+/*2*/
+.modal2 {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  margin-top: 17.5%; /* Сидеть на вершине */
+  margin-left: 300px;
+  left: 0;
+  top: 0;
+  text-decoration: none;
+  color: black;
+  background: none;
+}
+
+/* Модальное содержание/коробка */
+.modal-content2 {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #888;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  line-height: 1.5;
+  padding: 5px;
+  width: 190px; /* Полная ширина */
+  height: 100px; /* Полная высота */
+}
+
+.modal-link2{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+/*3*/
+.modal3 {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  margin-top: 20%; /* Сидеть на вершине */
+  margin-left: 300px;
+  left: 0;
+  top: 0;
+  text-decoration: none;
+  color: black;
+  background: none;
+}
+
+/* Модальное содержание/коробка */
+.modal-content3 {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #888;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  line-height: 1.5;
+  padding: 5px;
+  width: 190px; /* Полная ширина */
+  height: 100px; /* Полная высота */
+}
+
+.modal-link3{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+/*4*/
+.modal4 {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  margin-top: 22.3%; /* Сидеть на вершине */
+  margin-left: 300px;
+  left: 0;
+  top: 0;
+  text-decoration: none;
+  color: black;
+  background: none;
+}
+
+/* Модальное содержание/коробка */
+.modal-content4 {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #888;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  line-height: 1.5;
+  padding: 5px;
+  width: 190px; /* Полная ширина */
+  height: 130px; /* Полная высота */
+}
+
+.modal-link4{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+/*5*/
+.modal5 {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  margin-top: 24.7%; /* Сидеть на вершине */
+  margin-left: 300px;
+  left: 0;
+  top: 0;
+  text-decoration: none;
+  color: black;
+  background: none;
+}
+
+/* Модальное содержание/коробка */
+.modal-content5 {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #888;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  line-height: 1.5;
+  padding: 5px;
+  width: 190px; /* Полная ширина */
+  height: 100px; /* Полная высота */
+}
+
+.modal-link5{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+/*6*/
+.modal6 {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  margin-top: 27.1%; /* Сидеть на вершине */
+  margin-left: 300px;
+  left: 0;
+  top: 0;
+  text-decoration: none;
+  color: black;
+  background-color: none;
+}
+
+/* Модальное содержание/коробка */
+.modal-content6 {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #888;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  line-height: 1.5;
+  padding: 5px;
+  width: 190px; /* Полная ширина */
+  height: 70px; /* Полная высота */
+}
+
+.modal-link6{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+
+/*ДЛЯ СЕДЬМОГО НЕ НАДО God Bless*/
+
+
+/*8*/
+.modal8 {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  margin-top: 31.8%; /* Сидеть на вершине */
+  margin-left: 300px;
+  left: 0;
+  top: 0;
+  text-decoration: none;
+  color: black;
+  background-color: none;
+}
+
+/* Модальное содержание/коробка */
+.modal-content8 {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #888;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  line-height: 1.5;
+  padding: 5px;
+  width: 190px; /* Полная ширина */
+  height: 70px; /* Полная высота */
+}
+
+.modal-link8{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+/*9*/
+.modal9 {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  margin-top: 34%; /* Сидеть на вершине */
+  margin-left: 300px;
+  left: 0;
+  top: 0;
+  text-decoration: none;
+  color: black;
+  background-color: none;
+}
+
+/* Модальное содержание/коробка */
+.modal-content9 {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #888;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+  line-height: 1.5;
+  padding: 5px;
+  width: 190px; /* Полная ширина */
+  height: 40px; /* Полная высота */
+}
+
+.modal-link9{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+/*--------------------------------------------------------------------------------------------*/
+.catalog{
+    width: 300px;
+    height: 510px;
+    position: fixed;
+    left: 0px;
+    top: 30%;
+    padding: 5px;
+    margin-left: 5px;
+    opacity: 1;
+    z-index: 2;
+}
+
+.catalog_button_0{
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    margin-top: 5px;
+    width: 290px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 30px;
+    color: black;
+    background: none;
+    text-align: left;
+    padding-left: 5px;
+}
+
+
+.catalog_button_1{
+    margin-top: 5px;
+    width: 290px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background: none;
+    border: 1px solid;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.catalog_button_1:focus {
+    border: none;
+    background: none;
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%),
+        linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%);
+    background-size:    100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+    animation: anim-cal_button .5s cubic-bezier(.5, .5, .5, .5);
+    animation-duration: 0.7s;
+    animation-play-state: running;
+}
+
+.catalog_button_2{
+    margin-top: 5px;
+    width: 290px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background: none;
+    border: 1px solid;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.catalog_button_2:focus {
+    border: none;
+    background: none;
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%),
+        linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%);
+    background-size:    100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+    animation: anim-cal_button .5s cubic-bezier(.5, .5, .5, .5);
+    animation-duration: 0.7s;
+    animation-play-state: running;
+}
+
+.catalog_button_3{
+    margin-top: 5px;
+    width: 290px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background: none;
+    border: 1px solid;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.catalog_button_3:focus {
+    border: none;
+    background: none;
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%),
+        linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%);
+    background-size:    100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+    animation: anim-cal_button .5s cubic-bezier(.5, .5, .5, .5);
+    animation-duration: 0.7s;
+    animation-play-state: running;
+}
+
+.catalog_button_4{
+    margin-top: 5px;
+    width: 290px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background: none;
+    border: 1px solid;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.catalog_button_4:focus {
+    border: none;
+    background: none;
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%),
+        linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%);
+    background-size:    100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+    animation: anim-cal_button .5s cubic-bezier(.5, .5, .5, .5);
+    animation-duration: 0.7s;
+    animation-play-state: running;
+}
+
+.catalog_button_5{
+    margin-top: 5px;
+    width: 290px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background: none;
+    border: 1px solid;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.catalog_button_5:focus {
+    border: none;
+    background: none;
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%),
+        linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%);
+    background-size:    100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+    animation: anim-cal_button .5s cubic-bezier(.5, .5, .5, .5);
+    animation-duration: 0.7s;
+    animation-play-state: running;
+}
+
+.catalog_button_6{
+    margin-top: 5px;
+    width: 290px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background: none;
+    border: 1px solid;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.catalog_button_6:focus {
+    border: none;
+    background: none;
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%),
+        linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%);
+    background-size:    100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+    animation: anim-cal_button .5s cubic-bezier(.5, .5, .5, .5);
+    animation-duration: 0.7s;
+    animation-play-state: running;
+}
+
+.catalog_button_7{
+    margin-top: 5px;
+    width: 290px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background: none;
+    border: 1px solid;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.catalog_button_7:focus {
+    border: none;
+    background: none;
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%),
+        linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%);
+    background-size:    100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+    animation: anim-cal_button .5s cubic-bezier(.5, .5, .5, .5);
+    animation-duration: 0.7s;
+    animation-play-state: running;
+}
+
+.catalog_button_8{
+    margin-top: 5px;
+    width: 290px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background: none;
+    border: 1px solid;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.catalog_button_8:focus {
+    border: none;
+    background: none;
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%),
+        linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%);
+    background-size:    100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+    animation: anim-cal_button .5s cubic-bezier(.5, .5, .5, .5);
+    animation-duration: 0.7s;
+    animation-play-state: running;
+}
+
+.catalog_button_9{
+    margin-top: 5px;
+    width: 290px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background: none;
+    border: 1px solid;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.catalog_button_9:focus {
+    border: none;
+    background: none;
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%),
+        linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%);
+    background-size:    100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+    animation: anim-cal_button .5s cubic-bezier(.5, .5, .5, .5);
+    animation-duration: 0.7s;
+    animation-play-state: running;
+}
+
+.catalog_button_10{
+    margin-top: 5px;
+    width: 290px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    background: none;
+    border: 1px solid;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.catalog_button_10:focus {
+    border: none;
+    background: none;
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%),
+        linear-gradient(to right, black 100%, black 100%),
+        linear-gradient(to bottom, black 100%, black 100%);
+    background-size:    100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+    animation: anim-cal_button .5s cubic-bezier(.5, .5, .5, .5);
+    animation-duration: 0.7s;
+    animation-play-state: running;
+}
+
+.catalog_header{
+    display: flex;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid;
+}
+
+.test_0{
+    text-decoration: none;
+    color: black;
+}
+
+
+@keyframes anim-cal_button {
+    0% {
+        background-size:    0 3px, 3px 0, 0 3px, 3px 0;
+    }
+    25% {
+        background-size:    100% 3px, 3px 0, 0 3px, 3px 0;
+    }
+    50% {
+        background-size:    100% 3px, 3px 100%, 0 3px, 3px 0;
+    }
+    75% {
+        background-size:    100% 3px, 3px 100%, 100% 3px, 3px 0;
+    }
+    100% {
+        background-size:    100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    }
+    border-radius: 10px 10px 10px 10px;
+}
+/*--------------------------------------------------------------*/
+/* start header */
+.header{
+    background-color: #d2d5d9;
+    border-bottom: 2px solid;
+    min-width: 100%;
+    max-width: 100%;
+
+
+}
+img{
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    margin-top: 5px;
+}
+
+.container{
+    height: 10%;
+    max-width: 1300px;
+    left: 25%;
+    margin: 0 auto;
+    margin-top: 70px;
+    width: 100%;
+    align-items: center;
+    background: #fff;
+    border-radius: 20px;
+
+
+}
+
+    .header_container{
+        display: flex;
+
+
+        min-width: 100%;
+        max-width: 70%;
+        background: #d2d5d9;/*#d2d5d9*/
+    }
+
+    .logo{
+        max-width: 7%;
+        margin-top: 2%;
+        margin-left: 8%;
+
+
+    }
+
+    .navi_link{
+        line-height: 100%;
+        text-decoration: none;
+        margin-left: 40%;
+        margin-top: 3%;
+        color: black;
+        font-size: 23px;
+        font-weight: 500;
+        min-width: 10%;
+
+
+    }
+
+
+.header_info{
+    margin-top: 3.5%;
+    min-width: 20%;
+    margin-left: 1%;
+    items-align: right;
+}
+
+.name_header{
+
+
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.name_header_2{
+
+
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.name_header_3{
+
+
+  font-size: 23px;
+
+}
+
+.price{
+    display: flex;
+
+    width: 11%;
+
+    margin-left: 80%;
+
+}
+
+.price_style{
+    text-align: center;
+    text-decoration: none;
+    font-size: 23px;
+    color: black;
+}
+
+.exel_png{
     margin-left: 10px;
+    margin-bottom: 10px;
+}
+/* end header*/
+/*--------------------------------------------------------------*/
+
+.invite{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
 }
 
-.a{
+/*--------------------------------------------------------------*/
+/* start compani*/
+.compani{
+    text-align: center;
+    max-width: 1000px;
+    width: 100%;
+    line-height:30px;
+    margin: 0 auto;
+
+    border-bottom: 2px solid;
+    /* боковые линии
+    border-left: 2px solid;
+    border-right: 2px solid;
+   */
+
+
+}
+.compani_1{
+    font-size: 30px;
+    font-stretch: ultra-expanded;
+
+    font-weight:700;
+
+    width: 70%;
+    margin: 0.9em auto;
+
+
+
+}
+
+/*o companii*/
+.compani_1:before, .compani_1:after {
+    content: "";
+    vertical-align: top;
+    display: inline-block;
+    width: 43.8%;
+    height: 0.50em;
+    border-bottom: 2px solid #000;
+    margin: 0 13% 0 -44%;
+  }
+ .compani_1:after {
+    margin: 0 -44% 0 13%;
+  }
+/*o companii*/
+
+.compani_2{
+    font-size: 16px;
+    font-weight:300;
+    color: #000;
+    transition: 0.7s ease;
+    padding-bottom: 60px;
+
+}
+
+.compani_2:hover{
+    font-size: 18px;
+    color: #000
+}
+/*  compani*/
+/*--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------*/
+/*REQUEST*/
+.request{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 1000px;
+    height: 400px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.request_container{
+    width: 100%;
+    height: 100%;
+}
+
+.request_form{
+    display: flex;
+    flex-direction: column;
+}
+
+.request_email{
+    width: 440px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    color: #a3a3a3;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    border: 0;
+    outline: 0;
+    padding: 22px 18px;
+}
+
+.request_name{
+    width: 440px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    color: #a3a3a3;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    border: 0;
+    outline: 0;
+    padding: 22px 18px;
+}
+
+
+.request_message{
+    width: 440px;
+    height: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    color: #a3a3a3;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    border: 0;
+    outline: 0;
+    padding: 10px 18px;
+    resize: none;
+}
+
+.request_checkbox_div{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.request_legend{
+    margin-top: 10px;
+    width: 400px;
+    font-size: 18px;
+
+}
+
+.request_checkbox{
+    height: 20px;
+    width: 20px;
+    margin-top: 20px;
+    margin-right: auto;
+    color: #a3a3a3;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    border: 0;
+    outline: 0;
+}
+
+.request_button{
+    width: 200px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    border: 0;
+    outline: 0;
+    background-color: #7f8ff4;
+    transition: all 200ms ease-in;
+
+}
+.request_button:hover{
+  background: #6c7ff2;
+}
+.ostavit{
+  font-weight:600;
+}
+/*REQUEST*/
+/*--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------*/
+/*mailing list*/
+.mailing_list{
+    text-align: center;
+    max-width: 1000px;
+    margin: 150px auto;
+    width: 100;
+    padding-bottom: 50px;
+}
+
+.container__item{
+    margin-top: 15px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+.uppercase {
+  text-transform: uppercase;
+}
+.btn {
+  display: inline-block;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  transition: all 200ms ease-in;
+  cursor: pointer;
+}
+.btn--primary {
+  background: #7f8ff4;
+  color: #fff;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  padding: 12px 36px;
+}
+.btn--primary:hover {
+  background: #6c7ff2;
+}
+.btn--primary:active {
+  background: #7f8ff4;
+  box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+.btn--inside {
+  margin-left: -96px;
+}
+.form__field {
+  width: 360px;
+  background: #fff;
+  color: #a3a3a3;
+  font: inherit;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  border: 0;
+  outline: 0;
+  padding: 22px 18px;
+}
+
+.form_checkbox_div{
+    display: flex;
+    flex-direction: row;
+    margin-left: 290px;
+
+}
+
+.form_legend{
+    margin-top: 10px;
+    width: 400px;
+    font-size: 18px;
+}
+
+.form_checkbox{
+    height: 20px;
+    width: 20px;
+    margin-top: 20px;
+    margin-right: auto;
+    color: #a3a3a3;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    border: 0;
+    outline: 0
+}
+/*mailing list*/
+/*--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------*/
+/*Footer*/
+.footer {
+    position: absolute;
+    border-top: 2px solid;
+    bottom: 0px;
+    width: 100%;
+    height: 100px;
+}
+
+.footer_wrap{
+    display: flex;
+    background: #d2d5d9;
+    width: 100%;
+}
+
+.first{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+.footer_info{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    padding-left: 22%;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.whatsapp{
+    width: 12%;
+    margin-top: 1%;
+    margin-left: 35%;
+    filter: grayscale(1); /* Черно-белый фильтр для изображения */
+    transition: 0.5s;
+}
+
+.whatsapp:hover{
+  filter: grayscale(0);
+}
+
+.second{
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    width: 15%;
+    padding-left: 3%;
+}
+
+.links_style{
     text-decoration: none;
+    color: black;
+}
+
+.third{
+    height: 250px;
+    width: 50%;
+}
+
+.footer_company{
+    max-width: 7%;
+
+    margin-top: 70px;
+    margin-left: 36%;
+    position: absolute;
+}
+
+.footer_OOO{
+    text-align: right;
+    font-size: 25px;
+    margin-right: 30%;
+    margin-top: 120px;
+}
+/*Footer*/
+/*--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------*/
+/*delivery*/
+.delivery{
+  text-align: center;
+  margin: auto;
+  max-width: 1000px;
+  margin-top: 50px;
+  line-height:50px;
+  font-size: 20px;
+  font-weight:500;
+  overflow: auto;
+
+}
+
+.delivery_1{
+      text-align: center;
+      margin: auto;
+      max-width: 1000px;
+      margin-top: 50px;
+      line-height:50px;
+      font-size: 20px;
+      font-weight:500;
+      overflow: auto;
+}
+
+.fow_watsapp_delivery{
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  transition: all 1s ease;
+}
+.fow_watsapp_delivery:hover {
+  transform: rotate(20deg);
+}
+.map{
+  width: 900px;
+  height: 450px;
+  border: 0px;
+  border-radius: 20px;
+}
+/*delivery*/
+/*--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------*/
+/*КАТАЛОГ*/
+.c_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    max-width: 1000px;
+}
+
+.button_con{
+    width: 310px;
+    height: 505px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+    box-shadow: 0;
+    transform: scale(0.95);
+    transition: box-shadow 0.5s, transform 0.5s;
+    padding-bottom: 15px;
+}
+
+
+
+/*--------------------------------------------------------------*/
+/*carousel picture*/
+#content-wrapper{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+	display: flex;
+	flex-wrap: wrap;
+
+	align-items: center;
+}
+
+.column{
+	width: 600px;
+	padding: 10px;
+
+}
+
+#featured{
+  min-width: 1000px;
+  max-width: 1000px;
+  max-height: 600px;
+  min-height: 600px;
+	object-fit: cover;
+	cursor: pointer;
+	border: 2px solid black;
+
+}
+
+.thumbnail{
+	object-fit: cover;
+	max-width: 180px;
+	max-height: 100px;
+	cursor: pointer;
+	opacity: 0.5;
+	margin: 5px;
+	border: 2px solid black;
+
+}
+
+.thumbnail:hover{
+	opacity:1;
+}
+
+.active{
+	opacity: 1;
+}
+
+#slide-wrapper{
+	display: flex;
+	min-height: 100px;
+	align-items: center;
+
+}
+
+#slider{
+	width: 1000px;
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+
+}
+
+#slider::-webkit-scrollbar {
+		width: 8px;
+
+}
+
+
+
+.arrow{
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	transition: .9s;
+}
+
+.arrow:hover{
+	opacity: .9;
+	width: 35px;
+	height: 35px;
+}
+
+
+/*carousel picture*/
+/*--------------------------------------------------------------*/
+
+.image{
+    display: flex;
+    flex-direction: column;
+    width: 130px;
+    left: 25%;
+    margin: auto;
+    margin-top: 50px;
+
+    align-items: center;
 }
