@@ -1157,8 +1157,9 @@ img{
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 1%;
     max-width: 1000px;
+    padding-bottom: 4%;
 }
 
 .button_con{
