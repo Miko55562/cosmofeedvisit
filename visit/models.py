@@ -68,7 +68,6 @@ class Product(models.Model):
     energy_value = models.CharField(max_length=150, verbose_name='Энергетическая ценность', null=True, blank=True)
     best_before_date = models.CharField(max_length=150, verbose_name='Срок годности', null=True, blank=True)
     type_of_packaging = models.CharField(max_length=150, verbose_name='Тип упаковки', null=True, blank=True)
-    price_is_for = models.CharField(max_length=150, verbose_name='Цена указана за', null=True, blank=True)
 
     availability = models.BooleanField(default=True, verbose_name='Наличие товара')
     is_published = models.BooleanField(default=True, verbose_name='Опубликовано')
