@@ -30,23 +30,23 @@ class Product(models.Model):
 
     product_code_2 = models.CharField(max_length=150, verbose_name='Код Товара 2', null=True, blank=True)
     weight_2 = models.CharField(max_length=150, verbose_name='Вес продукции 2', null=True, blank=True)
-    prise_2 = models.CharField(max_length=150, verbose_name='Цена продукции 1', null=True, blank=True)
+    prise_2 = models.CharField(max_length=150, verbose_name='Цена продукции 2', null=True, blank=True)
 
     product_code_3 = models.CharField(max_length=150, verbose_name='Код Товара 3', null=True, blank=True)
     weight_3 = models.CharField(max_length=150, verbose_name='Вес продукции 3', null=True, blank=True)
-    prise_3 = models.CharField(max_length=150, verbose_name='Цена продукции 1', null=True, blank=True)
+    prise_3 = models.CharField(max_length=150, verbose_name='Цена продукции 3', null=True, blank=True)
 
     product_code_4 = models.CharField(max_length=150, verbose_name='Код Товара 4', null=True, blank=True)
     weight_4 = models.CharField(max_length=150, verbose_name='Вес продукции 4', null=True, blank=True)
-    prise_4 = models.CharField(max_length=150, verbose_name='Цена продукции 1', null=True, blank=True)
+    prise_4 = models.CharField(max_length=150, verbose_name='Цена продукции 4', null=True, blank=True)
 
     product_code_5 = models.CharField(max_length=150, verbose_name='Код Товара 5', null=True, blank=True)
     weight_5 = models.CharField(max_length=150, verbose_name='Вес продукции 5', null=True, blank=True)
-    prise_5 = models.CharField(max_length=150, verbose_name='Цена продукции 1', null=True, blank=True)
+    prise_5 = models.CharField(max_length=150, verbose_name='Цена продукции 5', null=True, blank=True)
 
     product_code_6 = models.CharField(max_length=150, verbose_name='Код Товара 6', null=True, blank=True)
     weight_6 = models.CharField(max_length=150, verbose_name='Вес продукции 6', null=True, blank=True)
-    prise_6 = models.CharField(max_length=150, verbose_name='Цена продукции 1', null=True, blank=True)
+    prise_6 = models.CharField(max_length=150, verbose_name='Цена продукции 6', null=True, blank=True)
 
     product_sku = models.CharField(max_length=150, verbose_name='Артикул товара', null=True, blank=True)
 
