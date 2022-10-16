@@ -136,6 +136,6 @@ class CatalogFile(models.Model):
     file = models.FileField(upload_to='CatalogFile', verbose_name='Файл')
 
     class Meta:
-        verbose_name = 'Файл каталога'
-        verbose_name_plural = 'Файлы каталога'
+        verbose_name = 'Прайслист'
+        verbose_name_plural = 'Прайслист'
         ordering = ['id']
