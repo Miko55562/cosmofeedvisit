@@ -1,20 +1,20 @@
 from django.db import models
 from smart_selects.db_fields import ChainedForeignKey
 from pytils import translit
+from adminsortable.models import SortableMixin
 
-class Category(models.Model):
+
+class Category(SortableMixin):
     title = models.CharField(max_length=150, db_index=True, verbose_name='Категория')
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name='URL')
-
-    def __str__(self):
-        return self.title
-
 
     class Meta:
         verbose_name = 'Категория'
         verbose_name_plural = 'Категории'
-        ordering = ['title']
-
+        ordering = ['order']
+    order = models.PositiveIntegerField(default=0, editable=False)
+    def __str__(self):
+        return self.title
 
 class Product(models.Model):
 
@@ -24,29 +24,29 @@ class Product(models.Model):
 
     name = models.CharField(max_length=150, verbose_name='Название')
 
-    product_code = models.CharField(max_length=150, verbose_name='Код Товара 1', null=True, blank=True)
-    weight = models.CharField(max_length=150, verbose_name='Вес продукции 1', null=True, blank=True)
     prise = models.CharField(max_length=150, verbose_name='Цена продукции 1', null=True, blank=True)
+    weight = models.CharField(max_length=150, verbose_name='Вес продукции 1', null=True, blank=True)
+    type_of_packaging = models.CharField(max_length=150, verbose_name='Тип упаковки 1', null=True, blank=True)
 
-    product_code_2 = models.CharField(max_length=150, verbose_name='Код Товара 2', null=True, blank=True)
-    weight_2 = models.CharField(max_length=150, verbose_name='Вес продукции 2', null=True, blank=True)
     prise_2 = models.CharField(max_length=150, verbose_name='Цена продукции 2', null=True, blank=True)
+    weight_2 = models.CharField(max_length=150, verbose_name='Вес продукции 2', null=True, blank=True)
+    type_of_packaging_2 = models.CharField(max_length=150, verbose_name='Тип упаковки 2', null=True, blank=True)
 
-    product_code_3 = models.CharField(max_length=150, verbose_name='Код Товара 3', null=True, blank=True)
-    weight_3 = models.CharField(max_length=150, verbose_name='Вес продукции 3', null=True, blank=True)
     prise_3 = models.CharField(max_length=150, verbose_name='Цена продукции 3', null=True, blank=True)
+    weight_3 = models.CharField(max_length=150, verbose_name='Вес продукции 3', null=True, blank=True)
+    type_of_packaging_3 = models.CharField(max_length=150, verbose_name='Тип упаковки 3', null=True, blank=True)
 
-    product_code_4 = models.CharField(max_length=150, verbose_name='Код Товара 4', null=True, blank=True)
-    weight_4 = models.CharField(max_length=150, verbose_name='Вес продукции 4', null=True, blank=True)
     prise_4 = models.CharField(max_length=150, verbose_name='Цена продукции 4', null=True, blank=True)
+    weight_4 = models.CharField(max_length=150, verbose_name='Вес продукции 4', null=True, blank=True)
+    type_of_packaging_4 = models.CharField(max_length=150, verbose_name='Тип упаковки 4', null=True, blank=True)
 
-    product_code_5 = models.CharField(max_length=150, verbose_name='Код Товара 5', null=True, blank=True)
-    weight_5 = models.CharField(max_length=150, verbose_name='Вес продукции 5', null=True, blank=True)
     prise_5 = models.CharField(max_length=150, verbose_name='Цена продукции 5', null=True, blank=True)
+    weight_5 = models.CharField(max_length=150, verbose_name='Вес продукции 5', null=True, blank=True)
+    type_of_packaging_5 = models.CharField(max_length=150, verbose_name='Тип упаковки 5', null=True, blank=True)
 
-    product_code_6 = models.CharField(max_length=150, verbose_name='Код Товара 6', null=True, blank=True)
-    weight_6 = models.CharField(max_length=150, verbose_name='Вес продукции 6', null=True, blank=True)
     prise_6 = models.CharField(max_length=150, verbose_name='Цена продукции 6', null=True, blank=True)
+    weight_6 = models.CharField(max_length=150, verbose_name='Вес продукции 6', null=True, blank=True)
+    type_of_packaging_6 = models.CharField(max_length=150, verbose_name='Тип упаковки 6', null=True, blank=True)
 
     product_sku = models.CharField(max_length=150, verbose_name='Артикул товара', null=True, blank=True)
 
@@ -67,7 +67,7 @@ class Product(models.Model):
     nutritional_value_of_100_grams = models.CharField(max_length=150, verbose_name='Пищевая ценность 100 грамм', null=True, blank=True)
     energy_value = models.CharField(max_length=150, verbose_name='Энергетическая ценность', null=True, blank=True)
     best_before_date = models.CharField(max_length=150, verbose_name='Срок годности', null=True, blank=True)
-    type_of_packaging = models.CharField(max_length=150, verbose_name='Тип упаковки', null=True, blank=True)
+
 
     availability = models.BooleanField(default=True, verbose_name='Наличие товара')
     is_published = models.BooleanField(default=True, verbose_name='Опубликовано')

@@ -6,17 +6,19 @@ from .models import Malling
 from .models import Partner
 from .models import CaruselProduct
 from .models import CatalogFile
+from adminsortable.admin import SortableAdmin
+from adminsortable.admin import SortableStackedInline
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'product_code', 'availability', 'is_published')
+    list_display = ('id', 'name', 'availability', 'is_published')
     list_display_links = ('id', 'name')
-    search_fields = ('name', 'product_code', 'product_sku')
+    search_fields = ('name',)
     list_filter = ('is_published', 'category',)
     list_editable = ('is_published', 'availability')
 
 
-class CategoryAdmin(admin.ModelAdmin):
+class CategoryAdmin(SortableAdmin):
     list_display = ('id', 'title')
     list_display_links = ('id', 'title')
     search_fields = ('title',)

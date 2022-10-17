@@ -145,6 +145,15 @@
               <div class="left">
                 <div class="details">
                   <p class="name">{{ item.name }}</p>
+                      {% if item.prise %}
+                      <p>Цена: {{ item.prise }} &nbsp Вес: {{ item.weight }}</p>
+                      {% endif %}
+                      {% if item.prise_2 %}
+                      <p>Цена: {{ item.prise_2 }} &nbsp Вес: {{ item.weight_2 }}</p>
+                      {% endif %}
+                      {% if item.prise_3 %}
+                      <p>Цена: {{ item.prise_3 }} &nbsp Вес: {{ item.weight_3 }}</p>
+                      {% endif %}
                 </div>
               </div>
             </div>

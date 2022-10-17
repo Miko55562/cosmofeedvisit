@@ -82,28 +82,28 @@
       <div class="column">
         <h1>{{ product.name }}</h1>
         <hr>
-        {% if product.product_code and product.prise and product.weight %}
-        <h4>id: {{ product.product_code }} Цена: {{ product.prise }} Вес: {{ product.weight }}</h4>
+        {% if product.prise and product.weight and product.type_of_packaging %}
+        <h4>Цена: {{ product.prise }} &nbsp Вес: {{ product.weight }} &nbsp Тип упаковки: {{ product.type_of_packaging }}</h4>
         {% endif %}
 
-        {% if product.product_code_2 and product.prise_2 and product.weight_2 %}
-        <h4>id: {{ product.product_code_2 }} Цена: {{ product.prise_2 }} Вес: {{ product.weight_2 }}</h4>
+        {% if product.prise_2 and product.weight_2 and product.type_of_packaging_2 %}
+        <h4>Цена: {{ product.prise_2 }} &nbsp Вес: {{ product.weight_2 }}  &nbsp Тип упаковки: {{ product.type_of_packaging_2 }}</h4>
         {% endif %}
 
-        {% if product.product_code_3 and product.prise_3 and product.weight_3 %}
-        <h4>id: {{ product.product_code_3 }} Цена: {{ product.prise_3 }} Вес: {{ product.weight_3 }}</h4>
+        {% if product.prise_3 and product.weight_3 and product.type_of_packaging_3 %}
+        <h4>Цена: {{ product.prise_3 }} &nbsp Вес: {{ product.weight_3 }}  &nbsp Тип упаковки: {{ product.type_of_packaging_3 }}</h4>
         {% endif %}
 
-        {% if product.product_code_4 and product.prise_4 and product.weight_4 %}
-        <h4>id: {{ product.product_code_4 }} Цена: {{ product.prise_4 }} Вес: {{ product.weight_4 }}</h4>
+        {% if product.prise_4 and product.weight_4 and product.type_of_packaging_4 %}
+        <h4>Цена: {{ product.prise_4 }} &nbsp Вес: {{ product.weight_4 }}  &nbsp Тип упаковки: {{ product.type_of_packaging_4 }}</h4>
         {% endif %}
 
-        {% if product.product_code_5 and product.prise_5 and product.weight_5 %}
-        <h4>id: {{ product.product_code_5 }} Цена: {{ product.prise_5 }} Вес: {{ product.weight_5 }}</h4>
+        {% if product.prise_5 and product.weight_5 and product.type_of_packaging_5 %}
+        <h4>Цена: {{ product.prise_5 }} &nbsp Вес: {{ product.weight_5 }}  &nbsp Тип упаковки: {{ product.type_of_packaging_5 }}</h4>
         {% endif %}
 
-        {% if product.product_code_6 and product.prise_6 and product.weight_6 %}
-        <h4>id: {{ product.product_code_6 }} Цена: {{ product.prise_6 }} Вес: {{ product.weight_6 }}</h4>
+        {% if product.prise_6 and product.weight_6 and product.type_of_packaging_6 %}
+        <h4>Цена: {{ product.prise_6 }} &nbsp Вес: {{ product.weight_6 }}  &nbsp Тип упаковки: {{ product.type_of_packaging_6 }}</h4>
         {% endif %}
 
         <p>{{ product.description }}</p>
@@ -128,10 +128,6 @@
 
         {% if product.best_before_date %}
         <p>Срок годности: {{ product.best_before_date }}</p>
-        {% endif %}
-
-        {% if product.type_of_packaging %}
-        <p>Тип упаковки: {{ product.type_of_packaging }}</p>
         {% endif %}
 
       </div>
