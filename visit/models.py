@@ -27,26 +27,32 @@ class Product(models.Model):
     prise = models.CharField(max_length=150, verbose_name='Цена продукции 1', null=True, blank=True)
     weight = models.CharField(max_length=150, verbose_name='Вес продукции 1', null=True, blank=True)
     type_of_packaging = models.CharField(max_length=150, verbose_name='Тип упаковки 1', null=True, blank=True)
+    quantity_from = models.CharField(max_length=150, verbose_name='Количечтво от 1', null=True, blank=True)
 
     prise_2 = models.CharField(max_length=150, verbose_name='Цена продукции 2', null=True, blank=True)
     weight_2 = models.CharField(max_length=150, verbose_name='Вес продукции 2', null=True, blank=True)
     type_of_packaging_2 = models.CharField(max_length=150, verbose_name='Тип упаковки 2', null=True, blank=True)
+    quantity_from_2 = models.CharField(max_length=150, verbose_name='Количечтво от 2', null=True, blank=True)
 
     prise_3 = models.CharField(max_length=150, verbose_name='Цена продукции 3', null=True, blank=True)
     weight_3 = models.CharField(max_length=150, verbose_name='Вес продукции 3', null=True, blank=True)
     type_of_packaging_3 = models.CharField(max_length=150, verbose_name='Тип упаковки 3', null=True, blank=True)
+    quantity_from_3 = models.CharField(max_length=150, verbose_name='Количечтво от 3', null=True, blank=True)
 
     prise_4 = models.CharField(max_length=150, verbose_name='Цена продукции 4', null=True, blank=True)
     weight_4 = models.CharField(max_length=150, verbose_name='Вес продукции 4', null=True, blank=True)
     type_of_packaging_4 = models.CharField(max_length=150, verbose_name='Тип упаковки 4', null=True, blank=True)
+    quantity_from_4 = models.CharField(max_length=150, verbose_name='Количечтво от 4', null=True, blank=True)
 
     prise_5 = models.CharField(max_length=150, verbose_name='Цена продукции 5', null=True, blank=True)
     weight_5 = models.CharField(max_length=150, verbose_name='Вес продукции 5', null=True, blank=True)
     type_of_packaging_5 = models.CharField(max_length=150, verbose_name='Тип упаковки 5', null=True, blank=True)
+    quantity_from_5 = models.CharField(max_length=150, verbose_name='Количечтво от 5', null=True, blank=True)
 
     prise_6 = models.CharField(max_length=150, verbose_name='Цена продукции 6', null=True, blank=True)
     weight_6 = models.CharField(max_length=150, verbose_name='Вес продукции 6', null=True, blank=True)
     type_of_packaging_6 = models.CharField(max_length=150, verbose_name='Тип упаковки 6', null=True, blank=True)
+    quantity_from_6 = models.CharField(max_length=150, verbose_name='Количечтво от 6', null=True, blank=True)
 
     product_sku = models.CharField(max_length=150, verbose_name='Артикул товара', null=True, blank=True)
 

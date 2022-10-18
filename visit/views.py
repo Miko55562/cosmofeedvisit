@@ -127,3 +127,6 @@ def partners(request):
     'partners':partners
     }
     return render(request, template_name='visit/partners.html', context=context)
+
+def coop(request):
+    return render(request, template_name='visit/coop.html')

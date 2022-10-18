@@ -1102,7 +1102,7 @@ img{
 .delivery{
   text-align: center;
   margin: auto;
-  max-width: 1000px;
+  max-width: 1100px;
   margin-top: 50px;
   line-height:50px;
   font-size: 20px;
@@ -1121,6 +1121,23 @@ img{
       font-weight:500;
       overflow: auto;
 }
+
+.delivery_center{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.delivery_left{
+    text-align: left;
+}
+
+.delivery_left1{
+    text-align: left;
+    font-size: 22px;
+    font-weight: 600;
+}
+
 
 .fow_watsapp_delivery{
   width: 100px;
@@ -1190,8 +1207,10 @@ img{
 }
 
 #featured{
+
   max-width: 1000px;
   max-height: 600px;
+
 	object-fit: cover;
 	cursor: pointer;
 	border: 2px solid black;
@@ -1266,3 +1285,33 @@ img{
 
     align-items: center;
 }
+
+.coop{
+    text-align: center;
+    margin: auto;
+    max-width: 100%;
+    margin-top: 50px;
+    line-height:50px;
+    font-size: 35px;
+    overflow: auto;
+    background: #e1e4e9;
+}
+
+.coop_left{
+   text-align: left;
+   font-size: 25px;
+   padding-left: 10px;
+}
+
+.coop_left1{
+   text-align: left;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
+.coop_center{
+    font-size: 25px;
+    text-align: center;
+}
+
