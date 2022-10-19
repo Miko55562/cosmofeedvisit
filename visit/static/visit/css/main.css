@@ -684,7 +684,7 @@ img{
         line-height: 0.6;
         text-decoration: none;
         margin-left: 40%;
-        margin-top: 4%;
+        margin-top: 3%;
         color: black;
         font-size: 23px;
         font-weight: 500;
@@ -913,17 +913,20 @@ img{
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 10px;
     color: white;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
     border: 0;
     outline: 0;
     background-color: #7f8ff4;
     transition: all 200ms ease-in;
+    text-transform: uppercase;
+    font: inherit;
 
 }
 .request_button:hover{
   background: #6c7ff2;
+
 }
 .ostavit{
   font-weight:600;
@@ -1299,19 +1302,26 @@ img{
 
 .coop_left{
    text-align: left;
-   font-size: 25px;
+   font-size: 20px;
    padding-left: 10px;
 }
 
 .coop_left1{
    text-align: left;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 600;
 }
 
 
 .coop_center{
-    font-size: 25px;
+    font-size: 22px;
     text-align: center;
+    font-weight: 600;
 }
 
+.shiza{
+    margin: auto;
+    width: 1200px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

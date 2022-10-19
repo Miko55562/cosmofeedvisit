@@ -12,4 +12,6 @@ urlpatterns = [
     path('product/<int:product_pk>', product_big, name='product_big'),
     path('robots.txt', robots),
     path('coop', coop),
+    path('certificate', certificate),
+
 ]

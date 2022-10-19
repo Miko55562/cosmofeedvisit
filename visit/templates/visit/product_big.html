@@ -108,7 +108,8 @@
         <h4>Цена: {{ product.prise_6 }} &nbsp Вес: {{ product.weight_6 }}  &nbsp Тип упаковки: {{ product.type_of_packaging_6 }} &nbsp Количество от: {{ product.quantity_from_6 }}</h4>
         {% endif %}
         <br>
-        <p>{{ product.description }}</p>
+        <h3>Описание</h3>
+        <p>{{ product.description|linebreaks }}</p>
         <br>
         <h3>Характеристики</h3>
         <br>

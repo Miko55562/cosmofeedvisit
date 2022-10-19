@@ -27,6 +27,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_HOST = '31.31.196.4'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'admin@econaturprodukt.ru'
+EMAIL_HOST_PASSWORD = 'Q464#w12Ww'
+DEFAULT_FROM_EMAIL = 'admin@econaturprodukt.ru'
+RECIPIENTS_EMAIL = ['info@econaturprodukt.ru']
 
 # Application definition
 

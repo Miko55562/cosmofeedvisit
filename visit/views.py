@@ -7,7 +7,9 @@ from .models import CaruselProduct
 from .models import CatalogFile
 from .models import Partner
 
-from django.core.mail import send_mail
+from django.http import HttpResponse, HttpResponseRedirect
+from cosmofeedvisit.settings import RECIPIENTS_EMAIL, DEFAULT_FROM_EMAIL
+from django.core.mail import send_mail, BadHeaderError
 import os
 from django.conf import settings
 from django.http import HttpResponse, Http404
@@ -16,12 +18,11 @@ def robots(request):
     return render(request, template_name='visit/robots.txt', content_type="text/plain")
 
 def download(request):
-    print(request)
-    path = CatalogFile.objects.get(id=1)
+    path = CatalogFile.objects.latest('pk')
     file_path = os.path.join(settings.MEDIA_ROOT, str(path.file))
     if os.path.exists(file_path):
         with open(file_path, 'rb') as fh:
-            response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")
+            response = HttpResponse(fh.read(), content_type="application/pdf")
             response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
             return response
     raise Http404
@@ -39,17 +40,19 @@ def index(request):
                                     mail=request_mail,
                                     sity=request_sity,
                                     message=request_message)
+        try:
+            send_mail(f'{request_name} от {request_mail}', request_message, DEFAULT_FROM_EMAIL, RECIPIENTS_EMAIL)
+        except BadHeaderError:
+            return HttpResponse('Ошибка в теме письма.')
     elif request.method == 'POST' and request.POST.get('Mailing'):
         request_name = request.POST.get("mail_mailler")
         Malling.objects.get_or_create(mail=request_name)
-
     categories = Category.objects.all()
     products = CaruselProduct.objects.values_list('product', flat=True)
     carusel_product = Product.objects.filter(pk__in=products).all()
-    print(products,carusel_product)
     context = {
     'categories': categories,
-    'carusel_product': carusel_product,
+    'carusel_product': carusel_product
     }
     return render(request, template_name='visit/index.html', context=context)
 
@@ -121,12 +124,29 @@ def product_big(request, product_pk):
     return render(request, template_name='visit/product_big.html', context=context)
 
 def partners(request):
+    if request.method == 'GET' and request.GET.get('download'):
+        return download(request)
     partners = Partner.objects.all()
-    print(partners)
+    categories = Category.objects.all()
     context = {
-    'partners':partners
+        'categories': categories,
+        'partners':partners,
     }
     return render(request, template_name='visit/partners.html', context=context)
 
 def coop(request):
-    return render(request, template_name='visit/coop.html')
+    if request.method == 'GET' and request.GET.get('download'):
+        return download(request)
+    categories = Category.objects.all()
+    context = {
+        'categories': categories,
+    }
+    return render(request, template_name='visit/coop.html', context=context)
+def certificate(request):
+    if request.method == 'GET' and request.GET.get('download'):
+        return download(request)
+    categories = Category.objects.all()
+    context = {
+        'categories': categories,
+    }
+    return render(request, template_name='visit/certificate.html', context=context)
